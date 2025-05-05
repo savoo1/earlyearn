@@ -1,0 +1,1592 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+	font-family: "Aeonik TRIAL";
+	src: url("../fonts/aeoniktrial-regular.otf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Aeonik TRIAL";
+	src: url("../fonts/AeonikTRIAL-Bold.otf");
+	font-weight: 700;
+}
+@font-face {
+	font-family: Aeonik;
+	src: url("../fonts/Aeonik-Medium.ttf");
+	font-weight: 500;
+}
+
+// def code
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #f4f8fb;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+	padding: 0;
+}
+* {
+	box-sizing: border-box;
+}
+input:focus {
+	outline: none;
+}
+.wrapper {
+	max-width: 1190px;
+	margin: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+img {
+	max-width: 100%;
+}
+// def code end
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@mixin flex-between-center {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+@mixin ul-def {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+
+.btn-t1 {
+	border-radius: 8px;
+	border: 1px solid #e3e6e8;
+	background: #fff;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+	@include flex-center();
+	min-height: 43px;
+	gap: 8px;
+	padding: 5px 24px;
+	min-width: 109px;
+	color: #181529;
+	text-align: center;
+	leading-trim: both;
+	text-edge: cap;
+	font-family: Urbanist;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	transition: all ease 0.5s;
+	position: relative;
+	overflow: hidden;
+	.hover-l {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		background-color: #8965e5;
+		transition: all ease 0.5s;
+		width: 0;
+		margin: auto;
+		border-radius: 8px;
+	}
+	.cont {
+		position: relative;
+		@include flex-center();
+	}
+	&:hover {
+		color: #fff;
+		.hover-l {
+			width: 100%;
+		}
+	}
+}
+.btn-blue {
+	border: 1px solid #5bc3ff;
+	background: linear-gradient(180deg, #00a1ff 0%, #039bf3 100%);
+	color: #fff;
+	&:hover {
+		border-color: #8965e5;
+	}
+}
+
+.btn-t2 {
+	border-radius: 80px;
+	border: 1px solid #fff;
+	background: rgba(255, 255, 255, 0.4);
+	box-shadow: 0px 4px 12px 0px rgba(19, 32, 56, 0.09);
+	@include flex-center();
+	display: inline-flex;
+	min-height: 56px;
+	color: #1c0a0a;
+	text-align: center;
+	font-family: "Aeonik TRIAL";
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 115%; /* 20.7px */
+	letter-spacing: 1.8px;
+	text-transform: uppercase;
+	transition: all ease 0.5s;
+	position: relative;
+	overflow: hidden;
+	padding-left: 8px;
+	padding-right: 18px;
+	.hover-l {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		background-color: #8965e5;
+		transition: all ease 0.5s;
+		width: 0;
+		margin: auto;
+		border-radius: 8px;
+	}
+	.cont {
+		position: relative;
+		@include flex-center();
+		gap: 10px;
+	}
+	&:hover {
+		color: #fff;
+		.hover-l {
+			width: 100%;
+		}
+	}
+}
+
+nav {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	padding: 15px 0;
+	z-index: 9999;
+
+	.wrapper {
+		max-width: 1390px;
+	}
+	.row {
+		@include flex-between-center();
+	}
+	.middle {
+		ul {
+			@include flex-center();
+			@include ul-def();
+			gap: 24px;
+			li {
+				a {
+					color: #1c0a0a;
+					font-family: "Aeonik TRIAL";
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 115%; /* 18.4px */
+					transition: all ease 0.5s;
+					&:hover {
+						color: #8965e5;
+					}
+				}
+				.active {
+					color: #8965e5;
+				}
+			}
+		}
+	}
+	.right {
+		@include flex-center();
+		gap: 18px;
+	}
+}
+
+.navbar.fixed {
+	position: fixed;
+	margin-top: -200px;
+	opacity: 0;
+	background-color: #fff;
+	box-shadow: 0px 1.81px 3.619px 0px rgba(0, 0, 0, 0.08);
+}
+
+.navbar.fixed.add2 {
+	transition: all ease 0.5s;
+}
+
+.navbar.fixed.show {
+	margin-top: 0;
+	opacity: 1;
+}
+
+.hero {
+	position: relative;
+	margin-top: 86px;
+	.wrapper {
+		max-width: 1390px;
+	}
+	.box-c {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		min-height: 891px;
+		border-radius: 32px;
+		background: #fafcfe;
+		padding-top: 80px;
+
+		background: url("../img/bg-hero-desktop.webp") no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+
+		.stars {
+			position: absolute;
+			left: 13px;
+			top: 14px;
+			animation: stars-animation 13s linear infinite;
+		}
+		@keyframes stars-animation {
+			0% {
+				transform: rotate(0);
+			}
+			15% {
+				opacity: 0;
+			}
+			25% {
+				opacity: 1;
+			}
+			50% {
+				transform: rotate(50deg);
+			}
+			65% {
+				opacity: 0;
+			}
+			75% {
+				opacity: 1;
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+	}
+
+	h1 {
+		color: #181529;
+		text-align: center;
+		font-family: Aeonik;
+		font-size: 62px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 115%; /* 71.3px */
+		margin: auto;
+	}
+	p {
+		color: #646464;
+		text-align: center;
+		leading-trim: both;
+		text-edge: cap;
+		font-family: "Aeonik TRIAL";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin-top: 17px;
+	}
+	.btn-place {
+		@include flex-center();
+		margin-top: 28px;
+	}
+	.avatars {
+		position: absolute;
+		left: 18px;
+		right: 0;
+		display: block;
+		margin: auto;
+		bottom: 0;
+	}
+
+	.leftsignals {
+		position: absolute;
+		bottom: 119px;
+		left: calc(50% - 620px);
+		.coinfl {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.c1 {
+			left: 175px;
+			top: 54px;
+		}
+		.c2 {
+			left: 113px;
+			top: 81px;
+		}
+		.c3 {
+			left: 157px;
+			top: 136px;
+		}
+		.c4 {
+			left: 58px;
+			top: 118px;
+		}
+		.c5 {
+			left: 60px;
+			top: 203px;
+		}
+		.c6 {
+			left: 119px;
+			top: 235px;
+		}
+		.c7 {
+			left: 66px;
+			top: 272px;
+		}
+		.c8 {
+			left: 130px;
+			top: 300px;
+		}
+		.c9 {
+			left: 184px;
+			top: 180px;
+		}
+		.c10 {
+			left: 111px;
+			top: 174px;
+		}
+	}
+
+	.rightsignals {
+		position: absolute;
+		bottom: 264px;
+		right: calc(50% - 609px);
+		.coinfl {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.c1 {
+			left: 70px;
+			top: 122px;
+		}
+		.c2 {
+			left: 125px;
+			top: 151px;
+		}
+		.c3 {
+			left: 193px;
+			top: 116px;
+		}
+		.c4 {
+			left: 188px;
+			top: 170px;
+		}
+		.c5 {
+			left: 250px;
+			top: 143px;
+		}
+		.c6 {
+			left: 123px;
+			top: 225px;
+		}
+		.c7 {
+			left: 206px;
+			top: 225px;
+		}
+		.c8 {
+			left: 290px;
+			top: 220px;
+		}
+		.c9 {
+			left: 244px;
+			top: 300px;
+		}
+		.c10 {
+			left: 131px;
+			top: 84px;
+		}
+	}
+}
+
+.signal path {
+	stroke-opacity: 0;
+	animation: pulse 2s ease-in-out infinite;
+}
+
+/* Right-to-left delay (reverse order) */
+.signal path:nth-child(1) {
+	animation-delay: 1.2s;
+}
+.signal path:nth-child(2) {
+	animation-delay: 1s;
+}
+.signal path:nth-child(3) {
+	animation-delay: 0.8s;
+}
+.signal path:nth-child(4) {
+	animation-delay: 0.6s;
+}
+.signal path:nth-child(5) {
+	animation-delay: 0.4s;
+}
+.signal path:nth-child(6) {
+	animation-delay: 0.2s;
+}
+.signal path:nth-child(7) {
+	animation-delay: 0s;
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		stroke-opacity: 0;
+	}
+	50% {
+		stroke-opacity: 1;
+	}
+}
+
+.coinfl {
+	position: absolute;
+	animation: float 2s ease-in-out infinite;
+}
+
+.c1 {
+	animation-delay: 0s;
+}
+.c2 {
+	animation-delay: 0.2s;
+}
+.c3 {
+	animation-delay: 0.4s;
+}
+.c4 {
+	animation-delay: 0.6s;
+}
+.c5 {
+	animation-delay: 0.8s;
+}
+.c6 {
+	animation-delay: 1s;
+}
+.c7 {
+	animation-delay: 1.2s;
+}
+.c8 {
+	animation-delay: 1.4s;
+}
+.c9 {
+	animation-delay: 1.6s;
+}
+.c10 {
+	animation-delay: 1.8s;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px) scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: translateY(-5px) scale(1.05);
+		opacity: 0.9;
+	}
+}
+
+.partners {
+	padding-top: 93px;
+	padding-bottom: 50px;
+	h2 {
+		color: #646464;
+		text-align: center;
+		leading-trim: both;
+		text-edge: cap;
+		font-family: Urbanist;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+	.boxes {
+		@include flex-between-center();
+		max-width: 1157px;
+		margin: auto;
+		margin-top: 38px;
+		.box {
+			border-radius: 10.858px;
+			border: 0.905px solid #e3e6e8;
+			background: #fff;
+			box-shadow: 0px 1.81px 3.619px 0px rgba(0, 0, 0, 0.08);
+			min-height: 59px;
+			@include flex-center();
+			padding: 5px 10px;
+			min-width: calc(16.66% - 15px);
+		}
+	}
+}
+
+.whyus {
+	padding-top: 72px;
+	padding-bottom: 50px;
+	h2 {
+		color: #181529;
+		font-family: Aeonik;
+		font-size: 52px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%; /* 62.4px */
+	}
+	h3 {
+		color: #181529;
+		font-family: Aeonik;
+		font-size: 26px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%; /* 31.2px */
+	}
+	p {
+		color: #646464;
+		font-family: "Aeonik TRIAL";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 150%; /* 30px */
+		margin-top: 16px;
+	}
+	.boxes {
+		@include flex-between-center();
+		align-items: unset;
+		margin-top: 40px;
+		.box-left {
+			max-width: 466px;
+			width: 100%;
+			min-height: 570px;
+			border-radius: 14px;
+			background: linear-gradient(180deg, #fff 0%, #fff 59.31%, #d8f0ff 100%);
+			box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+			padding: 32px;
+			position: relative;
+		}
+
+		.box {
+			width: calc(100% - 500px);
+			min-height: 100%;
+			height: 100%;
+			.box2 {
+				width: 100%;
+				border-radius: 14px;
+				background: linear-gradient(90deg, #fff 66.65%, #ff6692 173.87%);
+				box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+				min-height: 270px;
+				padding: 30px;
+				position: relative;
+				margin-top: 31px;
+				p {
+					max-width: 237px;
+				}
+				.revard {
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					border-radius: 12px 0px 14px 0px;
+					background: #fff;
+					min-height: 201px;
+					width: 373px;
+					padding: 11px 20px;
+					h4 {
+						color: #646464;
+						leading-trim: both;
+						text-edge: cap;
+						font-family: "Aeonik TRIAL";
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 160%; /* 25.6px */
+					}
+					h5 {
+						color: #181529;
+						leading-trim: both;
+						text-edge: cap;
+						font-family: "Aeonik TRIAL";
+						font-size: 28px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: 160%; /* 44.8px */
+					}
+					.rightarrow {
+						position: absolute;
+						right: 20px;
+						top: 19px;
+						width: 40px;
+						height: 40px;
+						background-color: #ff6692;
+						border-radius: 100%;
+						@include flex-center();
+					}
+					.diagram {
+						margin: auto;
+						margin-top: 23px;
+						display: block;
+					}
+				}
+				.bg2 {
+					position: absolute;
+					left: 0;
+					right: 0;
+					margin: auto;
+					display: block;
+				}
+			}
+			.box1 {
+				width: 100%;
+				border-radius: 14px;
+				background: linear-gradient(90deg, #fff 66.65%, rgba(155, 126, 228, 0.8) 173.87%);
+				box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+				min-height: 270px;
+				padding: 30px;
+			}
+			.circles {
+				@include flex-between-center();
+				margin-top: 20px;
+				position: relative;
+				.bgimg {
+					position: absolute;
+					left: 0;
+					right: 0;
+					margin: auto;
+				}
+				.ins1 {
+					margin-bottom: -18px;
+					position: relative;
+					z-index: 2;
+				}
+				.ins2 {
+					position: relative;
+					z-index: 2;
+				}
+
+				.line {
+					position: absolute;
+					width: 20%;
+					.in {
+						width: 100%;
+						height: 1px;
+						background-color: #daeffb;
+					}
+					.ff {
+						position: absolute;
+						left: 0;
+						background-color: #0996ea;
+						width: 21px;
+						height: 1px;
+						top: 0;
+						border-radius: 3px;
+						animation: moveline2 1s linear infinite;
+					}
+				}
+				.line2 {
+					left: 25%;
+					.ff {
+						animation: moveline2 1.5s linear infinite;
+					}
+				}
+				.line3 {
+					right: 25px;
+					left: unset;
+					-webkit-transform: scaleX(-1);
+					transform: scaleX(-1);
+					.ff {
+						animation: moveline2 1s linear infinite;
+					}
+				}
+				.line4 {
+					right: 25%;
+					left: unset;
+					-webkit-transform: scaleX(-1);
+					transform: scaleX(-1);
+					.ff {
+						animation: moveline2 1.5s linear infinite;
+					}
+				}
+
+				@keyframes moveline2 {
+					0% {
+						left: 0%;
+						opacity: 1;
+					}
+					90% {
+						opacity: 1;
+					}
+					100% {
+						left: 100%;
+						opacity: 0; /* optional fade at end */
+					}
+				}
+			}
+		}
+	}
+	.place-img1 {
+		position: absolute;
+		width: 400px;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 400px;
+		bottom: 0;
+		// background-color: black;
+		.why1 {
+			position: absolute;
+			bottom: 47px;
+			right: 40px;
+			z-index: 5;
+		}
+		.why2 {
+			position: absolute;
+			bottom: 153px;
+			left: 30px;
+			z-index: 5;
+		}
+		.why3 {
+			position: absolute;
+			top: 7px;
+			left: 81px;
+			z-index: 5;
+		}
+		.why4 {
+			position: absolute;
+			top: 0px;
+			z-index: 5;
+			right: 40px;
+		}
+		.line {
+			position: absolute;
+			width: 180px;
+			.in {
+				width: 100%;
+				height: 1px;
+				background-color: #daeffb;
+			}
+			.ff {
+				position: absolute;
+				left: 0;
+				background-color: #0996ea;
+				width: 21px;
+				height: 1px;
+				top: 0;
+				border-radius: 3px;
+				animation: moveRight 2s linear infinite;
+			}
+
+			@keyframes moveRight {
+				0% {
+					left: 0%;
+				}
+				50% {
+					left: 100%;
+				}
+				100% {
+					left: 0%;
+				}
+			}
+		}
+		.why-bg {
+			position: absolute;
+			left: -50px;
+			top: -50px;
+			width: 480px;
+			max-width: unset;
+		}
+		.line1 {
+			bottom: 164px;
+			transform: rotate(15deg);
+			left: 50px;
+		}
+		.line2 {
+			bottom: 234px;
+			transform: rotate(54deg);
+			left: 93px;
+			width: 220px;
+			.ff {
+				animation: moveRight 1.5s linear infinite;
+			}
+		}
+		.line3 {
+			bottom: 250px;
+			transform: rotate(98deg);
+			left: 213px;
+			width: 190px;
+			.ff {
+				animation: moveRight 1.8s linear infinite;
+			}
+		}
+	}
+}
+
+.affiliates {
+	padding-top: 70px;
+	padding-bottom: 120px;
+	h2 {
+		color: #000;
+		font-family: Aeonik;
+		font-size: 52px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		text-align: center;
+	}
+	p {
+		color: #646464;
+		text-align: center;
+		leading-trim: both;
+		text-edge: cap;
+		font-family: "Aeonik TRIAL";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin-top: 14px;
+	}
+	.boxes {
+		@include flex-between-center();
+		flex-wrap: wrap;
+		margin-top: 40px;
+		gap: 28px;
+		.box {
+			width: calc(33.33% - 20px);
+			border-radius: 20px;
+			background: #fff;
+			box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+			padding: 40px 30px;
+			min-height: 369px;
+			.img-place {
+				border-radius: 16px;
+				background: rgba(0, 161, 255, 0.2);
+				box-shadow: 0px 1px 4px 0px rgba(101, 111, 131, 0.2);
+				width: 90px;
+				height: 90px;
+				@include flex-center();
+				margin: auto;
+			}
+			.imgp2 {
+				border-radius: 16px;
+				background: rgba(255, 102, 146, 0.2);
+				box-shadow: 0px 1px 4px 0px rgba(101, 111, 131, 0.2);
+			}
+			.imgp3 {
+				border-radius: 16px;
+				background: rgba(137, 101, 229, 0.2);
+				box-shadow: 0px 1px 4px 0px rgba(101, 111, 131, 0.2);
+			}
+			.imgp4 {
+				border-radius: 16px;
+				background: rgba(1, 195, 172, 0.2);
+				box-shadow: 0px 1px 4px 0px rgba(101, 111, 131, 0.2);
+			}
+			.imgp5 {
+				border-radius: 16px;
+				background: rgba(137, 101, 229, 0.2);
+				box-shadow: 0px 1px 4px 0px rgba(101, 111, 131, 0.2);
+			}
+			.imgp6 {
+				border-radius: 16px;
+				background: rgba(255, 102, 146, 0.2);
+				box-shadow: 0px 1px 4px 0px rgba(101, 111, 131, 0.2);
+			}
+			h3 {
+				color: #181529;
+				text-align: center;
+				font-family: Aeonik;
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 120%; /* 28.8px */
+				margin-top: 33px;
+			}
+			p {
+				color: #646464;
+				text-align: center;
+				font-family: "Aeonik TRIAL";
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 150%; /* 30px */
+			}
+		}
+	}
+	.btn-place {
+		@include flex-center();
+		margin-top: 29px;
+	}
+}
+
+.platform {
+	background: #fff;
+	padding-top: 116px;
+	padding-bottom: 120px;
+	h2 {
+		color: #181529;
+		text-align: center;
+		font-family: Aeonik;
+		font-size: 52px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%; /* 62.4px */
+	}
+	p {
+		color: #646464;
+		text-align: center;
+		font-family: "Aeonik TRIAL";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 150%; /* 30px */
+		max-width: 760px;
+		margin: auto;
+		margin-top: 14px;
+	}
+	.order-dif.order-box {
+		margin-top: 90px;
+		.left {
+			order: 2;
+			max-width: 517px;
+		}
+		.right {
+			flex: 1;
+			margin-top: 20px;
+		}
+		.inimgs {
+			width: 593px;
+			position: absolute;
+			left: 30px;
+			bottom: -45px;
+			.icon1 {
+				position: absolute;
+				top: 10px;
+				left: -20px;
+				animation: float 2s ease-in-out infinite;
+			}
+			.icon2 {
+				position: absolute;
+				top: 10px;
+				right: 167px;
+				animation: float 2.4s ease-in-out infinite;
+			}
+			.icon3 {
+				position: absolute;
+				top: 172px;
+				right: 30px;
+				animation: float 2.2s ease-in-out infinite;
+			}
+			.icon4 {
+				position: absolute;
+				bottom: 23px;
+				right: 100px;
+				animation: float 2.6s ease-in-out infinite;
+			}
+		}
+		.boximg {
+			border-radius: 40px;
+			background: linear-gradient(7deg, #c5eafb -1.69%, #fff 47.72%, #fff 61.02%, #ffe6ca 104.05%);
+			box-shadow: 0px 0.878px 3.512px 0px rgba(133, 146, 173, 0.2);
+			max-width: 539px;
+			width: 100%;
+			min-height: 503px;
+			position: relative;
+		}
+	}
+	.order-box {
+		@include flex-between-center();
+		align-items: start;
+		margin-top: 70px;
+		h3 {
+			color: #181529;
+			font-family: Aeonik;
+			font-size: 41.6px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 120%; /* 49.92px */
+		}
+		.right {
+			margin-right: -36px;
+			margin-top: -11px;
+		}
+		ul {
+			@include ul-def();
+			margin-top: 46px;
+			display: flex;
+			flex-direction: column;
+			gap: 31px;
+			li {
+				padding-left: 90px;
+				position: relative;
+				.left {
+					position: absolute;
+					left: 0;
+					top: -2px;
+					width: 72px;
+					height: 72px;
+					border-radius: 12px;
+					background: rgba(0, 161, 255, 0.2);
+					box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+					@include flex-center();
+				}
+				.blue {
+					border-radius: 12px;
+					background: rgba(0, 161, 255, 0.2);
+					box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+				}
+				.orange {
+					border-radius: 12px;
+					background: rgba(255, 102, 146, 0.2);
+					box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+				}
+				.purple {
+					border-radius: 12px;
+					background: rgba(137, 101, 229, 0.2);
+					box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+				}
+				.green {
+					border-radius: 12px;
+					background: rgba(1, 195, 172, 0.2);
+					box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+				}
+				h4 {
+					color: #181529;
+					font-family: Aeonik;
+					font-size: 24px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 120%; /* 28.8px */
+				}
+				p {
+					text-align: left;
+					color: #646464;
+					font-family: "Aeonik TRIAL";
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 160%; /* 32px */
+					margin-top: 8px;
+				}
+			}
+		}
+	}
+}
+
+.pulsing {
+	animation: pulsing 1s linear infinite;
+}
+
+@keyframes pulsing {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.blockchain {
+	background-color: #f4f8fb;
+	padding-top: 93px;
+	padding-bottom: 70px;
+	h2 {
+		color: #181529;
+		text-align: center;
+		font-family: Aeonik;
+		font-size: 52px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%; /* 62.4px */
+	}
+	p {
+		color: #646464;
+		text-align: center;
+		font-family: "Aeonik TRIAL";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 150%; /* 30px */
+		margin: auto;
+		max-width: 771px;
+		margin-top: 14px;
+	}
+	.boxes {
+		@include flex-between-center();
+		margin-top: 44px;
+		align-items: start;
+		.box {
+			border-radius: 14px;
+			background: linear-gradient(0deg, #fff 0%, #fff 59.31%, #e7deff 100%);
+			box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+			width: calc(33.33% - 18px);
+			padding-bottom: 24px;
+			.img-place {
+				min-height: 370px;
+				@include flex-center();
+				position: relative;
+				img {
+					position: relative;
+					z-index: 2;
+				}
+				.bgimg {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 1;
+				}
+				.bl1 {
+					position: absolute;
+					left: calc(50% - 101px);
+					top: calc(50% - 6px);
+					transform: translateY(-50%);
+				}
+				.bl2 {
+					position: absolute;
+					right: calc(50% - 112px);
+					top: calc(50% - 99px);
+					transform: translateY(-50%);
+				}
+				.bl3 {
+					position: absolute;
+					right: calc(50% - 103px);
+					bottom: calc(50% - 123px);
+					transform: translateY(-50%);
+				}
+			}
+			h3 {
+				color: #181529;
+				font-family: Aeonik;
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 120%; /* 28.8px */
+				padding: 0 24px;
+				margin-top: -20px;
+			}
+			p {
+				color: #646464;
+				font-family: "Aeonik TRIAL";
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 150%; /* 30px */
+				margin-top: 14px;
+				text-align: left;
+				padding: 0 24px;
+			}
+		}
+		.box2 {
+			border-radius: 14px;
+			background: linear-gradient(0deg, #fff 0%, #fff 59.31%, #ffdfe8 100%);
+			box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+		}
+		.box3 {
+			border-radius: 14px;
+			background: linear-gradient(0deg, #fff 0%, #fff 59.31%, #d8f0ff 100%);
+			box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+		}
+	}
+}
+
+.faq {
+	background-color: #f4f8fb;
+	padding-top: 103px;
+	padding-bottom: 70px;
+	h2 {
+		color: #181529;
+		font-family: Aeonik;
+		font-size: 52px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%; /* 62.4px */
+	}
+	p {
+		color: #646464;
+		font-family: "Aeonik TRIAL";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 160%; /* 32px */
+		margin-top: 20px;
+	}
+	.row {
+		@include flex-between-center();
+		align-items: start;
+		.left {
+			max-width: 409px;
+			p {
+				max-width: 381px;
+			}
+			.btn-t2 {
+				align-items: center;
+				margin-top: 25px;
+			}
+		}
+	}
+	.faq-cards {
+		display: flex;
+		flex-direction: column;
+		max-width: 620px;
+		gap: 12px;
+	}
+}
+
+.faq-card {
+	border-radius: 16px;
+	background: #fff;
+	box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+	.question {
+		padding: 24px;
+		color: #000;
+		font-family: Aeonik;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%; /* 24px */
+		@include flex-between-center();
+		gap: 10px;
+		cursor: pointer;
+
+		.navigator {
+			width: 32px;
+			height: 32px;
+			// border: 2px solid #000;
+			border-radius: 100%;
+			position: relative;
+			min-width: 30px;
+			background-color: #019ffc;
+			transition: all ease 0.5s;
+		}
+		.navigator:after {
+			width: 16px;
+			height: 2px;
+			background-color: #fff;
+			border-radius: 2px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			content: "";
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.navigator:before {
+			width: 16px;
+			height: 2px;
+			background-color: #fff;
+			border-radius: 2px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			content: "";
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(90deg);
+			transition: all ease 0.5s;
+		}
+		&:hover {
+			.navigator {
+				background-color: #8965e5;
+			}
+		}
+	}
+	.answer {
+		overflow: hidden;
+		max-height: 0;
+		transition: all ease 0.5s;
+		opacity: 0.8;
+		padding-left: 24px;
+		padding-right: 24px;
+		.in {
+			padding: 0px;
+			padding-top: 14px;
+			transition: all ease 0.5s;
+			border-top: 1px solid #d9dcde;
+			margin-top: 20px;
+		}
+		p {
+			color: #646464;
+			font-family: "Aeonik TRIAL";
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 160%; /* 28.8px */
+			margin: 0;
+		}
+	}
+}
+.question_opened .question {
+	.navigator:before {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+}
+.question_opened .answer {
+	.in {
+		padding-bottom: 24px;
+		margin-top: 0;
+	}
+}
+
+.presale {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	h2 {
+		color: #181529;
+		font-family: Aeonik;
+		font-size: 52px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%; /* 62.4px */
+		max-width: 801px;
+	}
+	.row {
+		@include flex-between-center();
+		.btn-t1 {
+			font-size: 18px;
+		}
+	}
+	.boxes {
+		@include flex-between-center();
+		flex-wrap: wrap;
+		gap: 30px;
+		margin-top: 43px;
+		.box {
+			border-radius: 20px;
+			background: #fff;
+			box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+			max-width: calc(33.33% - 22px);
+			min-height: 368px;
+			padding: 40px 30px;
+			h3 {
+				color: #181529;
+				text-align: center;
+				font-family: Aeonik;
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 120%; /* 28.8px */
+				margin-top: 34px;
+			}
+			p {
+				color: #646464;
+				text-align: center;
+				font-family: "Aeonik TRIAL";
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 150%; /* 30px */
+				margin-top: 12px;
+			}
+
+			.imgplace {
+				width: 90px;
+				height: 90px;
+				border-radius: 12px;
+				background: rgba(0, 161, 255, 0.2);
+				box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+				@include flex-center();
+				margin: auto;
+			}
+			.blue {
+				border-radius: 12px;
+				background: rgba(0, 161, 255, 0.2);
+				box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+			}
+			.orange {
+				border-radius: 12px;
+				background: rgba(255, 102, 146, 0.2);
+				box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+			}
+			.purple {
+				border-radius: 12px;
+				background: rgba(137, 101, 229, 0.2);
+				box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+			}
+			.green {
+				border-radius: 12px;
+				background: rgba(1, 195, 172, 0.2);
+				box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+			}
+		}
+	}
+}
+
+.earlyearn {
+	padding-top: 70px;
+	padding-bottom: 123px;
+	.box {
+		border-radius: 32px;
+		background: #fff;
+		box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+		min-height: 480px;
+		background: url("../img/earlyearn.webp") no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		padding-top: 89px;
+		padding-bottom: 89px;
+	}
+	h3 {
+		color: #181529;
+		text-align: center;
+		leading-trim: both;
+		text-edge: cap;
+		font-family: Urbanist;
+		font-size: 29.647px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 130%; /* 38.541px */
+	}
+	h2 {
+		margin: auto;
+		max-width: 668px;
+		margin-top: 9px;
+		color: #181529;
+		text-align: center;
+		font-family: Aeonik;
+		font-size: 52px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%; /* 62.4px */
+	}
+	p {
+		margin: auto;
+		margin-top: 14px;
+		color: #646464;
+		text-align: center;
+		font-family: "Aeonik TRIAL";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 160%; /* 32px */
+		max-width: 736px;
+	}
+	.btn-place {
+		@include flex-center();
+		margin-top: 15px;
+	}
+}
+
+footer {
+	border-top: 1px solid #d9dcde;
+	padding-top: 46px;
+	padding-bottom: 34px;
+	p {
+		color: #646464;
+		leading-trim: both;
+		text-edge: cap;
+		font-family: Urbanist;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 160%; /* 25.6px */
+		max-width: 268px;
+		margin-top: 10px;
+	}
+	.boxes {
+		@include flex-between-center();
+		align-items: start;
+		.box {
+			min-width: 151px;
+		}
+		.logo {
+			padding-top: 6px;
+		}
+	}
+	h3 {
+		color: #181529;
+		leading-trim: both;
+		text-edge: cap;
+		font-family: Urbanist;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 160%; /* 28.8px */
+	}
+	.socm {
+		@include flex-between-center();
+		justify-content: start;
+		gap: 16px;
+		margin-top: 10px;
+		a {
+			width: 40px;
+			height: 40px;
+			background-color: rgba(1, 159, 252, 0.2);
+			border-radius: 100%;
+			@include flex-center();
+			transition: all ease 0.5s;
+			svg path {
+				transition: all ease 0.5s;
+			}
+			&:hover {
+				background-color: #8965e5;
+				svg {
+					path {
+						fill: #fff;
+					}
+				}
+			}
+		}
+	}
+	ul {
+		@include ul-def();
+		display: flex;
+		flex-direction: column;
+		gap: 1px;
+		margin-top: 4px;
+		a {
+			color: #646464;
+			leading-trim: both;
+			text-edge: cap;
+			font-family: Urbanist;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 160%; /* 25.6px */
+			transition: all ease 0.5s;
+			&:hover {
+				color: #8965e5;
+			}
+		}
+	}
+}
+
+.downline {
+	border-top: 1px solid #d9dcde;
+	padding-top: 17px;
+	padding-bottom: 17px;
+
+	color: #646464;
+	leading-trim: both;
+	text-edge: cap;
+	font-family: Urbanist;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%; /* 25.6px */
+	text-align: center;
+}
