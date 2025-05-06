@@ -9,7 +9,7 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"></script>
 
-    <link rel="icon" type="image/x-icon" href="img/smlogo.webp">
+    <link rel="icon" type="image/x-icon" href="img/logo-phone.svg">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -21,7 +21,8 @@
         <div class="row">
           <div class="left">
             <a href="#hero" class="scroll"><img src="img/logo.svg"
-                alt="logo"></a>
+                alt="logo" class="logo"><img src="img/logo-phone.svg"
+                class="logophone" alt></a>
           </div>
           <div class="middle">
             <ul>
@@ -31,6 +32,14 @@
               <li><a href="#blockchain" class="scroll">Blockchain</a></li>
               <li><a href="#faq" class="scroll">FAQ</a></li>
               <li><a href="#vendor" class="scroll">Vendor</a></li>
+              <li class="mobileview">
+                <a href="#" class="btn-t1"><div class="hover-l"></div><span
+                    class="cont">Sign
+                    in</span></a>
+                <a href="#" class="btn-t1 btn-blue"><div
+                    class="hover-l"></div><span class="cont">Sign
+                    Up</span></a>
+              </li>
             </ul>
           </div>
           <div class="right">
@@ -40,6 +49,11 @@
             <a href="#" class="btn-t1 btn-blue"><div
                 class="hover-l"></div><span class="cont">Sign
                 Up</span></a>
+          </div>
+          <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
           </div>
         </div>
       </div>
@@ -231,19 +245,21 @@
     <section class="partners">
       <div class="wrapper">
         <h2>Our Advertising Partners</h2>
-        <div class="boxes">
-          <div class="box"><img loading="lazy" src="img/partners/1.webp"
-              alt="partners"></div>
-          <div class="box"><img loading="lazy" src="img/partners/2.webp"
-              alt="partners"></div>
-          <div class="box"><img loading="lazy" src="img/partners/3.webp"
-              alt="partners"></div>
-          <div class="box"><img loading="lazy" src="img/partners/4.webp"
-              alt="partners"></div>
-          <div class="box"><img loading="lazy" src="img/partners/5.webp"
-              alt="partners"></div>
-          <div class="box"><img loading="lazy" src="img/partners/6.webp"
-              alt="partners"></div>
+        <div class="forscrollmobile">
+          <div class="boxes">
+            <div class="box"><img loading="lazy" src="img/partners/1.webp"
+                alt="partners"></div>
+            <div class="box"><img loading="lazy" src="img/partners/2.webp"
+                alt="partners"></div>
+            <div class="box"><img loading="lazy" src="img/partners/3.webp"
+                alt="partners"></div>
+            <div class="box"><img loading="lazy" src="img/partners/4.webp"
+                alt="partners"></div>
+            <div class="box"><img loading="lazy" src="img/partners/5.webp"
+                alt="partners"></div>
+            <div class="box"><img loading="lazy" src="img/partners/6.webp"
+                alt="partners"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -436,7 +452,7 @@
           seamless promotion features to maximize your earnings
           effortlessly.</p>
 
-        <div class="order-box">
+        <div class="order-box order-box1">
           <div class="left">
             <h3>User-Friendly Dashboard</h3>
             <ul>
@@ -471,7 +487,8 @@
             </ul>
           </div>
           <div class="right">
-            <img loading="lazy" src="img/order1.webp" alt="img for order sec">
+            <img loading="lazy" src="img/order1.webp" class="order-sec-img1"
+              alt="img for order sec">
           </div>
         </div>
 
@@ -545,13 +562,15 @@
               <img loading="lazy" src="img/blockchain/6.webp"
                 class="bgimg pulsing" alt>
             </div>
-            <h3>
-              Immutable Contracts
-            </h3>
-            <p>
-              Your commissions are secure and transparent – no changes after
-              payout.
-            </p>
+            <div class="contin">
+              <h3>
+                Immutable Contracts
+              </h3>
+              <p>
+                Your commissions are secure and transparent – no changes after
+                payout.
+              </p>
+            </div>
           </div>
           <div class="box box2">
             <div class="img-place">
@@ -692,12 +711,14 @@
               <img loading="lazy" src="img/blockchain/7.webp"
                 class="bgimg pulsing" alt>
             </div>
-            <h3>
-              Instant Payouts
-            </h3>
-            <p>
-              Payments are processed immediately via Solana and Ethereum.
-            </p>
+            <div class="contin">
+              <h3>
+                Instant Payouts
+              </h3>
+              <p>
+                Payments are processed immediately via Solana and Ethereum.
+              </p>
+            </div>
           </div>
           <div class="box box3">
             <div class="img-place">
@@ -705,13 +726,16 @@
               <img loading="lazy" src="img/blockchain/8.webp"
                 class="bgimg pulsing" alt>
             </div>
-            <h3>
-              Full Transparency
-            </h3>
-            <p>
-              Every transaction is securely recorded on the blockchain for peace
-              of mind.
-            </p>
+            <div class="contin">
+              <h3>
+                Full Transparency
+              </h3>
+              <p>
+                Every transaction is securely recorded on the blockchain for
+                peace
+                of mind.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -995,6 +1019,11 @@
     <div class="downline">
       © 2025 PresaleBoost. All rights reserved.
     </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" title="Go to top"><img src="img/uparrow.svg"
+        alt></a>
+
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -16,10 +16,10 @@ $(".faq-card .question").click(function (e) {
 
 $(".navbar .lines").click(function (e) {
   e.preventDefault();
-  if ($(this).parent().parent().parent().parent().hasClass("active")) {
-    $(this).parent().parent().parent().parent().removeClass("active");
+  if ($(this).parent().parent().parent().hasClass("active")) {
+    $(this).parent().parent().parent().removeClass("active");
   } else {
-    $(this).parent().parent().parent().parent().addClass("active");
+    $(this).parent().parent().parent().addClass("active");
   }
 });
 
@@ -145,4 +145,21 @@ $(window).on("scroll load", function () {
     counted = true;
     animateCount($(".countnumber"));
   }
+});
+
+$(document).ready(function () {
+  // Show or hide the button
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 500) {
+      $(".back-to-top").fadeIn();
+    } else {
+      $(".back-to-top").fadeOut();
+    }
+  });
+
+  // Scroll to top on click
+  $(".back-to-top").click(function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, 600);
+  });
 });

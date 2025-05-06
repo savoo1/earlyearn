@@ -1,0 +1,750 @@
+@media (max-width: 1400px) {
+    .wrapper,
+    .hero .wrapper {
+        max-width: 1150px;
+    }
+    .hero .avatars {
+        max-width: 890px;
+    }
+    .hero .leftsignals {
+        left: calc(50% - 580px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .wrapper,
+    .hero .wrapper {
+        max-width: 950px;
+    }
+    .hero h1 {
+        font-size: 48px;
+    }
+    .hero .avatars {
+        max-width: 650px;
+    }
+    .hero .box-c {
+        min-height: 650px;
+    }
+    .hero .leftsignals {
+        transform: scale(0.7);
+        left: calc(50% - 480px);
+        bottom: 20px;
+    }
+    .hero .rightsignals {
+        bottom: 124px;
+        right: calc(50% - 489px);
+        transform: scale(0.7);
+    }
+    .partners {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .platform,
+    .blockchain,
+    .presale,
+    .affiliates,
+    .earlyearn,
+    .faq,
+    .whyus {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .blockchain h2,
+    .platform h2,
+    .platform .order-box h3,
+    .faq h2,
+    .presale h2,
+    .earlyearn h2,
+    .affiliates h2,
+    .whyus h2 {
+        font-size: 38px;
+    }
+    .platform .order-box ul li h4,
+    .blockchain .boxes .box h3,
+    .presale .boxes .box h3,
+    .affiliates .boxes .box h3 {
+        font-size: 22px;
+    }
+    .blockchain p,
+    .faq .row .left p,
+    .platform p,
+    .earlyearn p,
+    .presale .boxes .box p,
+    .blockchain .boxes .box p,
+    .whyus p,
+    .affiliates p,
+    .faq-card .answer p,
+    .platform .order-box ul li p,
+    .affiliates .boxes .box p {
+        font-size: 16px;
+    }
+
+    .platform .order-box .right {
+        margin-top: 30px;
+    }
+
+    .platform .order-dif.order-box .boximg {
+        width: 540px;
+        transform: scale(0.8);
+        transform-origin: left;
+    }
+
+    .whyus .boxes .box-left {
+        max-width: 370px;
+    }
+    .whyus .boxes .box {
+        width: calc(100% - 400px);
+    }
+    .whyus .boxes .box .box2 .revard {
+        max-width: 300px;
+    }
+    .whyus .boxes .box .box2 p {
+        max-width: 180px;
+    }
+
+    .blockchain .boxes .box .img-place {
+        min-height: 300px;
+        transform: scale(0.8);
+    }
+    .faq-card .question {
+        font-size: 18px;
+        padding: 18px;
+    }
+    .presale .left {
+        max-width: calc(100% - 400px);
+    }
+    .presale .boxes {
+        gap: 15px;
+    }
+    .presale .boxes .box {
+        max-width: calc(33.33% - 11px);
+    }
+    .earlyearn .box {
+        padding: 70px 0;
+        min-height: unset;
+    }
+    .earlyearn h3 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 1000px) {
+    nav .wrapper,
+    .wrapper,
+    .hero .wrapper {
+        max-width: 772px;
+    }
+    nav .middle {
+        position: relative;
+        left: unset;
+        right: unset;
+    }
+    nav .left {
+        position: relative;
+        z-index: 99999999;
+    }
+    nav .middle {
+        position: fixed;
+        flex-direction: column;
+        .mobileview {
+            display: flex;
+        }
+        ul {
+            flex-direction: column;
+        }
+        top: 0px;
+        background-color: #fff;
+        left: 0;
+        right: 0;
+        gap: 24px;
+        padding-bottom: 50px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding-top: 15px;
+        max-height: calc(100vh - 91px);
+        overflow: auto;
+        justify-content: start;
+        visibility: hidden;
+        opacity: 0;
+        transition: all ease 0.5s;
+    }
+    nav .right {
+        display: none;
+    }
+    nav {
+        .lines {
+            display: flex !important;
+            flex-direction: column;
+            gap: 3px;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 8px;
+            border: 1.5px solid #e3e6e8;
+            background: #fff;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            position: relative;
+            z-index: 10;
+            .line {
+                width: 18px;
+                height: 2px;
+                background-color: #181529;
+                transition: all ease 0.5s;
+            }
+        }
+    }
+    .navbar.active {
+        background-color: #fff;
+        position: fixed;
+    }
+    .navbar.active .lines {
+        .line:nth-child(1) {
+            transform: rotate(50deg);
+        }
+        .line:nth-child(2) {
+            transform: rotate(-50deg);
+            margin-top: -5px;
+        }
+        .line:nth-child(3) {
+            transform: rotate(50deg);
+            margin-top: -7px;
+            opacity: 0;
+        }
+    }
+    .navbar.active .middle {
+        opacity: 1;
+        visibility: visible;
+        top: 77px;
+        z-index: 9999;
+    }
+    .hero {
+        margin-top: 76px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+    .hero .avatars {
+        max-width: 580px;
+    }
+    .hero .leftsignals {
+        transform: scale(0.6);
+        left: calc(50% - 430px);
+        bottom: -10px;
+    }
+    .hero .rightsignals {
+        bottom: 84px;
+        right: calc(50% - 449px);
+        transform: scale(0.6);
+    }
+    .partners .boxes {
+        margin-top: 20px;
+    }
+    .partners {
+        .wrapper {
+            max-width: 100%;
+            padding: 0;
+        }
+        .forscrollmobile {
+            overflow: hidden;
+            .boxes {
+                width: 1200px;
+                padding-left: 20px;
+                padding-right: 20px;
+                animation: slideBox 10s linear infinite alternate;
+            }
+
+            @keyframes slideBox {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(100vw - 1200px));
+                }
+            }
+        }
+    }
+
+    .blockchain h2,
+    .platform h2,
+    .platform .order-box h3,
+    .faq h2,
+    .presale h2,
+    .earlyearn h2,
+    .affiliates h2,
+    .whyus h2 {
+        font-size: 32px;
+    }
+
+    .whyus .boxes {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .whyus .boxes .box-left {
+        max-width: 100%;
+    }
+    .whyus .place-img1 {
+        transform: translateX(-50%) scale(0.8);
+        transform-origin: bottom;
+    }
+    .whyus .boxes .box-left {
+        min-height: 460px;
+    }
+    .whyus .boxes .box {
+        width: 100%;
+    }
+    .whyus p {
+        margin-top: 8px;
+    }
+    .whyus .boxes .box .box2 .revard {
+        max-width: 400px;
+    }
+    .affiliates .boxes .box {
+        width: calc(50% - 15px);
+    }
+    .platform .order-box {
+        flex-direction: column;
+        .left,
+        .right {
+            width: 100%;
+        }
+    }
+    .platform .order-box .right {
+        margin: 0;
+        margin-top: 20px;
+        .order-sec-img1 {
+            max-width: 500px;
+            margin: auto;
+            display: block;
+        }
+    }
+    .platform .order-dif.order-box .left {
+        order: 1;
+    }
+    .platform .order-dif.order-box .right {
+        order: 2;
+    }
+    .platform .order-dif.order-box .boximg {
+        transform: scale(0.9);
+        transform-origin: center;
+        margin: auto;
+    }
+    .blockchain .boxes {
+        flex-direction: column;
+        gap: 30px;
+        .box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding-bottom: 0;
+            .contin {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+    }
+    .blockchain .boxes .box .img-place {
+        min-width: 300px;
+    }
+    .blockchain .boxes .box h3 {
+        margin-top: 0;
+    }
+    .faq .row {
+        flex-direction: column;
+        gap: 50px;
+        .left {
+            max-width: 100%;
+        }
+    }
+    .faq .faq-cards,
+    .faq .row .left p {
+        max-width: 100%;
+    }
+    .presale {
+        position: relative;
+        padding-bottom: 130px;
+    }
+    .presale .row {
+        flex-direction: column;
+        .left,
+        .right {
+            width: 100%;
+            max-width: 100%;
+        }
+        .right {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: 50px;
+        }
+    }
+    .presale .boxes .box {
+        max-width: calc(50% - 8px);
+    }
+    .earlyearn h2 {
+        max-width: 500px;
+    }
+    .earlyearn .box {
+        padding: 100px 50px;
+    }
+    footer p {
+        max-width: 220px;
+    }
+    footer .boxes .box {
+        min-width: unset;
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        .logo {
+            display: none;
+        }
+        .logophone {
+            display: block;
+        }
+    }
+    nav .wrapper,
+    .wrapper,
+    .hero .wrapper {
+        max-width: 500px;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    .hero .box-c {
+        padding-top: 63px;
+        min-height: unset;
+        padding-bottom: 225px;
+        background: url("../img/herophone.png") no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .btn-t2 {
+        font-size: 16px;
+        min-height: 46px;
+        img {
+            max-width: 32px;
+        }
+    }
+    .hero .avatars {
+        max-width: 340px;
+    }
+    .hero .rightsignals {
+        bottom: -31px;
+        right: calc(50% - 349px);
+        transform: scale(0.4);
+    }
+    .hero .leftsignals {
+        transform: scale(0.4);
+        left: calc(50% - 305px);
+        bottom: -83px;
+    }
+    .partners h2 {
+        font-size: 20px;
+    }
+    .blockchain h2,
+    .platform h2,
+    .platform .order-box h3,
+    .faq h2,
+    .presale h2,
+    .earlyearn h2,
+    .affiliates h2,
+    .whyus h2 {
+        font-size: 24px;
+    }
+    .whyus h2 {
+        max-width: 262px;
+        margin: auto;
+        text-align: center;
+    }
+    .whyus {
+        padding-top: 20px;
+    }
+    .whyus .boxes {
+        margin-top: 24px;
+    }
+    .whyus p {
+        margin-top: 2px;
+    }
+    .whyus .boxes .box .box2 {
+        margin-top: 21px;
+    }
+    .whyus .boxes {
+        gap: 21px;
+    }
+    .whyus .boxes .box .box2 p {
+        max-width: 100%;
+    }
+    .whyus .boxes .box .box2 {
+        min-height: 320px;
+    }
+    .affiliates .boxes {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 32px;
+        .box {
+            width: 100%;
+            min-height: unset;
+            padding: 24px 20px;
+        }
+    }
+    .affiliates .boxes .box .img-place {
+        width: 52px;
+        height: 52px;
+        img {
+            max-width: 32px;
+        }
+    }
+    .affiliates .boxes .box h3 {
+        margin-top: 16px;
+    }
+    .affiliates .boxes .box p {
+        margin-top: 8px;
+    }
+    .affiliates {
+        padding-top: 25px;
+    }
+    .platform .order-box1 .right {
+        border-radius: 29.402px;
+        background: linear-gradient(0deg, #e3d8ff 0%, #fff 59.31%, #d8f0ff 100%);
+        box-shadow: 0px 0.645px 2.582px 0px rgba(133, 146, 173, 0.2);
+        max-width: 100%;
+        width: 100%;
+        margin-top: 30px;
+        .order-sec-img1 {
+            max-width: 100%;
+            margin: 0;
+        }
+        img {
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+    .platform .order-box ul li .left {
+        width: 56px;
+        height: 56px;
+        img {
+            max-width: 32px;
+        }
+    }
+    .platform .order-box ul li {
+        padding-left: 70px;
+    }
+    .platform .order-box ul li p {
+        margin-top: 4px;
+    }
+    .blockchain p,
+    .faq .row .left p,
+    .platform p,
+    .earlyearn p,
+    .presale .boxes .box p,
+    .blockchain .boxes .box p,
+    .whyus p,
+    .affiliates p,
+    .faq-card .answer p,
+    .platform .order-box ul li p,
+    .affiliates .boxes .box p {
+        font-size: 14px;
+    }
+    .platform .order-box ul li h4,
+    .blockchain .boxes .box h3,
+    .presale .boxes .box h3,
+    .affiliates .boxes .box h3 {
+        font-size: 18px;
+    }
+
+    .platform .order-box ul {
+        margin-top: 32px;
+    }
+    .platform .order-box {
+        margin-top: 40px;
+    }
+    .platform .order-dif.order-box .boximg {
+        transform: scale(0.7) translateX(-70%);
+        margin-left: 50%;
+        transform-origin: top;
+    }
+    .platform .order-dif.order-box .right {
+        flex: unset;
+        height: 350px;
+        margin-top: 50px;
+    }
+    .blockchain .boxes .box {
+        flex-direction: column;
+    }
+    .blockchain .boxes .box .contin {
+        padding-top: 0;
+    }
+    .blockchain .boxes .box p {
+        margin-top: 4px;
+    }
+    .blockchain .boxes .box .img-place {
+        transform: scale(0.6);
+        margin-top: -50px;
+        margin-bottom: -50px;
+    }
+    .blockchain .boxes {
+        gap: 16px;
+        margin-top: 32px;
+    }
+    .faq {
+        position: relative;
+        padding-bottom: 70px;
+    }
+    .faq .row .left .btn-place {
+        position: absolute;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        right: 0;
+    }
+    .faq-card .question {
+        font-size: 16px;
+    }
+    .presale h2 {
+        text-align: center;
+    }
+    .presale .boxes {
+        margin-top: 32px;
+        .box {
+            max-width: 100%;
+            width: 100%;
+            min-height: unset;
+            padding: 24px 20px;
+        }
+    }
+    .presale .boxes .box .imgplace {
+        width: 52px;
+        height: 52px;
+        img {
+            width: 32px;
+        }
+    }
+    .presale .boxes .box h3 {
+        margin-top: 16px;
+    }
+    .presale .boxes .box p {
+        margin-top: 8px;
+    }
+    .earlyearn {
+        padding-top: 0;
+    }
+    .earlyearn p {
+        font-size: 16px;
+        margin-top: 16px;
+    }
+    .earlyearn .box {
+        padding: 56px 13px 104px 13px;
+        background: url("../img/eqarnbg-phone.png") no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    footer .boxes {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        p {
+            max-width: 100%;
+        }
+        .box {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    footer .socm {
+        align-items: center;
+        justify-content: center;
+    }
+    .platform {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 475px) {
+    .whyus .place-img1 {
+        transform: translateX(-50%) scale(0.7);
+    }
+    .whyus .boxes .box-left {
+        min-height: 400px;
+    }
+    .whyus .boxes .box .circles .ins2 {
+        max-width: 38px;
+    }
+    .whyus .boxes .box .circles .ins1 {
+        max-width: 80px;
+    }
+    .whyus .boxes .box .box1 {
+        min-height: 220px;
+    }
+    .whyus .boxes .box .box2 .revard {
+        max-width: 270px;
+    }
+    .whyus .boxes .box .box2 .revard h5 {
+        font-size: 18px;
+    }
+    .whyus .boxes .box .box2 .revard h4 {
+        font-size: 12px;
+    }
+    .whyus .boxes .box .box2 .revard {
+        min-height: 150px;
+    }
+    .whyus .boxes .box .box2 .revard .rightarrow {
+        transform: scale(0.8);
+        transform-origin: top right;
+    }
+    .whyus .boxes .box .box2 {
+        min-height: 260px;
+    }
+    .platform .order-dif.order-box .boximg {
+        transform: scale(0.6) translateX(-82%);
+    }
+    .platform .order-dif.order-box .right {
+        height: 310px;
+    }
+}
+@media (max-width: 440px) {
+    .hero .avatars {
+        max-width: 280px;
+    }
+    .hero .leftsignals {
+        transform: scale(0.35);
+        left: calc(50% - 276px);
+        bottom: -105px;
+    }
+    .hero .rightsignals {
+        bottom: -58px;
+        right: calc(50% - 325px);
+        transform: scale(0.35);
+    }
+    .hero .box-c {
+        padding-bottom: 200px;
+    }
+}
+@media (max-width: 390px) {
+    .whyus .place-img1 {
+        transform: translateX(-50%) scale(0.6);
+    }
+    .platform .order-dif.order-box .right {
+        height: 260px;
+    }
+    .platform .order-dif.order-box .boximg {
+        transform: scale(0.5) translateX(-98%);
+    }
+}
