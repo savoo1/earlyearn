@@ -259,7 +259,7 @@
     width: 1200px;
     padding-left: 20px;
     padding-right: 20px;
-    animation: slideBox 10s linear infinite;
+    animation: slideBox 25s linear infinite;
     gap: 20px;
   }
   @keyframes slideBox {
@@ -415,7 +415,10 @@
     max-width: 500px;
   }
   .hero h1 {
-    font-size: 32px;
+    font-size: 31px;
+  }
+  .earlyearn .box .dots-down {
+    animation: stars-animation 5s linear infinite;
   }
   .hero p {
     font-size: 18px;

@@ -1221,6 +1221,8 @@ nav .right {
   box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
   width: calc(33.33% - 18px);
   padding-bottom: 24px;
+  overflow: hidden;
+  position: relative;
 }
 .blockchain .boxes .box .img-place {
   min-height: 370px;
@@ -1228,7 +1230,6 @@ nav .right {
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
 }
 .blockchain .boxes .box .img-place img,
 .blockchain .boxes .box .img-place svg {
@@ -1543,7 +1544,7 @@ nav .right {
   margin: auto;
   display: block;
   top: -200px;
-  animation: stars-animation 20s linear infinite;
+  animation: stars-animation 5s linear infinite;
 }
 @keyframes stars-animation {
   0% {
@@ -1551,7 +1552,7 @@ nav .right {
     transform: scale(1);
   }
   50% {
-    top: -150px;
+    top: -200px;
     transform: scale(1.2);
   }
   100% {
