@@ -94,18 +94,18 @@ a {
 		top: 0;
 		bottom: 0;
 		right: 0;
-		background-color: #8965e5;
+		background-color: #def2ef;
 		transition: all ease 0.5s;
 		width: 0;
 		margin: auto;
-		border-radius: 8px;
+		border-radius: 6px;
 	}
 	.cont {
 		position: relative;
 		@include flex-center();
 	}
 	&:hover {
-		color: #fff;
+		color: #000;
 		.hover-l {
 			width: 100%;
 		}
@@ -116,7 +116,8 @@ a {
 	background: linear-gradient(180deg, #00a1ff 0%, #039bf3 100%);
 	color: #fff;
 	&:hover {
-		border-color: #8965e5;
+		border-color: #def2ef;
+		color: #000;
 	}
 }
 
@@ -148,7 +149,7 @@ a {
 		top: 0;
 		bottom: 0;
 		right: 0;
-		background-color: #8965e5;
+		background-color: #daecfe;
 		transition: all ease 0.5s;
 		width: 0;
 		margin: auto;
@@ -160,7 +161,7 @@ a {
 		gap: 10px;
 	}
 	&:hover {
-		color: #fff;
+		// color: #fff;
 		.hover-l {
 			width: 100%;
 		}
@@ -173,9 +174,9 @@ nav {
 	right: 0;
 	top: 0;
 	padding: 15px 0;
-	z-index: 9999;
+	z-index: 9999999999999999;
 	.logophone {
-		display: none;
+		// display: none;
 	}
 
 	.lines {
@@ -186,7 +187,7 @@ nav {
 		flex-direction: column;
 		display: none;
 		a {
-			min-width: 250px;
+			// min-width: 250px;
 		}
 		.btn-blue {
 			color: #fff;
@@ -198,6 +199,10 @@ nav {
 	}
 	.row {
 		@include flex-between-center();
+	}
+	.left {
+		position: relative;
+		z-index: 999999;
 	}
 	.middle {
 		ul {
@@ -249,6 +254,9 @@ nav {
 .hero {
 	position: relative;
 	margin-top: 86px;
+	.sign-btns {
+		display: none;
+	}
 	.wrapper {
 		max-width: 1390px;
 	}
@@ -563,6 +571,12 @@ nav {
 .whyus {
 	padding-top: 72px;
 	padding-bottom: 50px;
+	.btn-place {
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+		display: none;
+	}
 	h2 {
 		color: #181529;
 		font-family: Aeonik;
@@ -1108,7 +1122,7 @@ nav {
 }
 
 .pulsing {
-	animation: pulsing 1s linear infinite;
+	animation: pulsing 1.5s linear infinite;
 }
 
 @keyframes pulsing {
@@ -1121,7 +1135,7 @@ nav {
 	50% {
 		opacity: 0;
 	}
-	60% {
+	70% {
 		opacity: 1;
 	}
 	100% {
@@ -1467,13 +1481,38 @@ nav {
 		background: #fff;
 		box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
 		min-height: 480px;
-		background: url("../img/earlyearn.webp") no-repeat center center;
+		background: url("../img/earlyearn.png") no-repeat center center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
 		padding-top: 89px;
 		padding-bottom: 89px;
+		position: relative;
+		overflow: hidden;
+		.dots-down {
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			display: block;
+			top: -200px;
+			animation: stars-animation 20s linear infinite;
+		}
+		@keyframes stars-animation {
+			0% {
+				top: -200px;
+				transform: scale(1);
+			}
+			50% {
+				top: -150px;
+				transform: scale(1.2);
+			}
+			100% {
+				top: -200px;
+				transform: scale(1);
+			}
+		}
 	}
 	h3 {
 		color: #181529;
@@ -1552,31 +1591,7 @@ footer {
 		font-weight: 600;
 		line-height: 160%; /* 28.8px */
 	}
-	.socm {
-		@include flex-between-center();
-		justify-content: start;
-		gap: 16px;
-		margin-top: 10px;
-		a {
-			width: 40px;
-			height: 40px;
-			background-color: rgba(1, 159, 252, 0.2);
-			border-radius: 100%;
-			@include flex-center();
-			transition: all ease 0.5s;
-			svg path {
-				transition: all ease 0.5s;
-			}
-			&:hover {
-				background-color: #8965e5;
-				svg {
-					path {
-						fill: #fff;
-					}
-				}
-			}
-		}
-	}
+
 	ul {
 		@include ul-def();
 		display: flex;
@@ -1599,7 +1614,31 @@ footer {
 		}
 	}
 }
-
+.socm {
+	@include flex-between-center();
+	justify-content: start;
+	gap: 16px;
+	margin-top: 10px;
+	a {
+		width: 40px;
+		height: 40px;
+		background-color: rgba(1, 159, 252, 0.2);
+		border-radius: 100%;
+		@include flex-center();
+		transition: all ease 0.5s;
+		svg path {
+			transition: all ease 0.5s;
+		}
+		&:hover {
+			background-color: #00a1ff;
+			svg {
+				path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+}
 .downline {
 	border-top: 1px solid #d9dcde;
 	padding-top: 17px;
@@ -1637,4 +1676,40 @@ footer {
 
 .back-to-top:hover {
 	background-color: #8965e5;
+}
+
+.wave {
+	position: absolute;
+	left: 0;
+	bottom: 20px;
+	right: 0;
+	display: block;
+	margin: auto;
+	max-width: 90%;
+}
+.wave path {
+	opacity: 0.08;
+	animation: pulse2 2s infinite ease-in-out;
+}
+
+.wave path:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.wave path:nth-child(2) {
+	animation-delay: 0.3s;
+}
+
+.wave path:nth-child(3) {
+	animation-delay: 0.6s;
+}
+
+@keyframes pulse2 {
+	0%,
+	100% {
+		opacity: 0.08;
+	}
+	50% {
+		opacity: 0.5;
+	}
 }

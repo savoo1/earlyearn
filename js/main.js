@@ -134,7 +134,7 @@ function animateCount($el) {
       clearInterval(counter);
     }
     $el.text(`$${start.toLocaleString("de-DE")},00`);
-  }, 20);
+  }, 80);
 }
 
 let counted = false;
@@ -162,4 +162,39 @@ $(document).ready(function () {
     e.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, 600);
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  function setupMobileScrolling() {
+    const boxesContainer = document.querySelector(".forscrollmobile .boxes");
+    if (!boxesContainer) return;
+
+    // Check if we're on mobile
+    if (window.innerWidth < 1000) {
+      // Check if we haven't already duplicated the content
+      if (!boxesContainer.dataset.duplicated) {
+        // Clone all boxes and append them for seamless looping
+        const boxes = boxesContainer.querySelectorAll(".box");
+        boxes.forEach((box) => {
+          const clone = box.cloneNode(true);
+          boxesContainer.appendChild(clone);
+        });
+        boxesContainer.dataset.duplicated = "true";
+      }
+    } else {
+      // If resized to desktop, remove duplicates if they exist
+      if (boxesContainer.dataset.duplicated) {
+        const boxes = boxesContainer.querySelectorAll(".box");
+        const originalCount = boxes.length / 2;
+        for (let i = boxes.length - 1; i >= originalCount; i--) {
+          boxesContainer.removeChild(boxes[i]);
+        }
+        boxesContainer.dataset.duplicated = "";
+      }
+    }
+  }
+
+  // Run on load and on resize
+  setupMobileScrolling();
+  window.addEventListener("resize", setupMobileScrolling);
 });

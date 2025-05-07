@@ -84,11 +84,11 @@ a {
   top: 0;
   bottom: 0;
   right: 0;
-  background-color: #8965e5;
+  background-color: #def2ef;
   transition: all ease 0.5s;
   width: 0;
   margin: auto;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 .btn-t1 .cont {
   position: relative;
@@ -97,7 +97,7 @@ a {
   justify-content: center;
 }
 .btn-t1:hover {
-  color: #fff;
+  color: #000;
 }
 .btn-t1:hover .hover-l {
   width: 100%;
@@ -109,7 +109,8 @@ a {
   color: #fff;
 }
 .btn-blue:hover {
-  border-color: #8965e5;
+  border-color: #def2ef;
+  color: #000;
 }
 
 .btn-t2 {
@@ -143,7 +144,7 @@ a {
   top: 0;
   bottom: 0;
   right: 0;
-  background-color: #8965e5;
+  background-color: #daecfe;
   transition: all ease 0.5s;
   width: 0;
   margin: auto;
@@ -156,9 +157,6 @@ a {
   justify-content: center;
   gap: 10px;
 }
-.btn-t2:hover {
-  color: #fff;
-}
 .btn-t2:hover .hover-l {
   width: 100%;
 }
@@ -169,10 +167,7 @@ nav {
   right: 0;
   top: 0;
   padding: 15px 0;
-  z-index: 9999;
-}
-nav .logophone {
-  display: none;
+  z-index: 10000000000000000;
 }
 nav .lines {
   display: none;
@@ -181,9 +176,6 @@ nav .mobileview {
   gap: 10px;
   flex-direction: column;
   display: none;
-}
-nav .mobileview a {
-  min-width: 250px;
 }
 nav .mobileview .btn-blue {
   color: #fff;
@@ -195,6 +187,10 @@ nav .row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+nav .left {
+  position: relative;
+  z-index: 999999;
 }
 nav .middle ul {
   display: flex;
@@ -247,6 +243,9 @@ nav .right {
 .hero {
   position: relative;
   margin-top: 86px;
+}
+.hero .sign-btns {
+  display: none;
 }
 .hero .wrapper {
   max-width: 1390px;
@@ -570,6 +569,12 @@ nav .right {
 .whyus {
   padding-top: 72px;
   padding-bottom: 50px;
+}
+.whyus .btn-place {
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  display: none;
 }
 .whyus h2 {
   color: #181529;
@@ -1126,7 +1131,7 @@ nav .right {
 }
 
 .pulsing {
-  animation: pulsing 1s linear infinite;
+  animation: pulsing 1.5s linear infinite;
 }
 
 @keyframes pulsing {
@@ -1139,7 +1144,7 @@ nav .right {
   50% {
     opacity: 0;
   }
-  60% {
+  70% {
     opacity: 1;
   }
   100% {
@@ -1492,10 +1497,35 @@ nav .right {
   background: #fff;
   box-shadow: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
   min-height: 480px;
-  background: url("../img/earlyearn.webp") no-repeat center center;
+  background: url("../img/earlyearn.png") no-repeat center center;
   background-size: cover;
   padding-top: 89px;
   padding-bottom: 89px;
+  position: relative;
+  overflow: hidden;
+}
+.earlyearn .box .dots-down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  top: -200px;
+  animation: stars-animation 20s linear infinite;
+}
+@keyframes stars-animation {
+  0% {
+    top: -200px;
+    transform: scale(1);
+  }
+  50% {
+    top: -150px;
+    transform: scale(1.2);
+  }
+  100% {
+    top: -200px;
+    transform: scale(1);
+  }
 }
 .earlyearn h3 {
   color: #181529;
@@ -1578,33 +1608,6 @@ footer h3 {
   font-weight: 600;
   line-height: 160%; /* 28.8px */
 }
-footer .socm {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  justify-content: start;
-  gap: 16px;
-  margin-top: 10px;
-}
-footer .socm a {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(1, 159, 252, 0.2);
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all ease 0.5s;
-}
-footer .socm a svg path {
-  transition: all ease 0.5s;
-}
-footer .socm a:hover {
-  background-color: #8965e5;
-}
-footer .socm a:hover svg path {
-  fill: #fff;
-}
 footer ul {
   margin: 0;
   padding: 0;
@@ -1627,6 +1630,34 @@ footer ul a {
 }
 footer ul a:hover {
   color: #8965e5;
+}
+
+.socm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: start;
+  gap: 16px;
+  margin-top: 10px;
+}
+.socm a {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(1, 159, 252, 0.2);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.5s;
+}
+.socm a svg path {
+  transition: all ease 0.5s;
+}
+.socm a:hover {
+  background-color: #00a1ff;
+}
+.socm a:hover svg path {
+  fill: #fff;
 }
 
 .downline {
@@ -1667,4 +1698,40 @@ footer ul a:hover {
 
 .back-to-top:hover {
   background-color: #8965e5;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  right: 0;
+  display: block;
+  margin: auto;
+  max-width: 90%;
+}
+
+.wave path {
+  opacity: 0.08;
+  animation: pulse2 2s infinite ease-in-out;
+}
+
+.wave path:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.wave path:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.wave path:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes pulse2 {
+  0%, 100% {
+    opacity: 0.08;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }/*# sourceMappingURL=style.css.map */

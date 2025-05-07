@@ -223,6 +223,22 @@
     }
     .hero {
         margin-top: 76px;
+        .only-desktop {
+            display: none;
+        }
+        .sign-btns {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    }
+    .whyus .btn-place {
+        display: flex;
+    }
+    .whyus {
+        padding-bottom: 20px;
     }
 
     .hero h1 {
@@ -255,15 +271,19 @@
                 width: 1200px;
                 padding-left: 20px;
                 padding-right: 20px;
-                animation: slideBox 10s linear infinite alternate;
+                animation: slideBox 10s linear infinite;
+                gap: 20px;
             }
 
             @keyframes slideBox {
                 0% {
-                    transform: translateX(0);
+                    transform: translateX(0%);
+                }
+                95% {
+                    transform: translateX(calc(-50% - 500px)); /* Smooth infinite scroll */
                 }
                 100% {
-                    transform: translateX(calc(100vw - 1200px));
+                    transform: translateX(calc(-50% - 570px)); /* Smooth infinite scroll */
                 }
             }
         }
@@ -401,12 +421,12 @@
 }
 
 @media (max-width: 700px) {
+    .removephone {
+        display: none;
+    }
     nav {
         .logo {
-            display: none;
-        }
-        .logophone {
-            display: block;
+            max-height: 48px;
         }
     }
     nav .wrapper,
@@ -647,12 +667,15 @@
         margin-top: 16px;
     }
     .earlyearn .box {
-        padding: 56px 13px 104px 13px;
+        padding: 56px 13px 53px 13px;
         background: url("../img/eqarnbg-phone.png") no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+    }
+    .wave {
+        bottom: -10px;
     }
     footer .boxes {
         flex-direction: column;
@@ -746,5 +769,20 @@
     }
     .platform .order-dif.order-box .boximg {
         transform: scale(0.5) translateX(-98%);
+    }
+}
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 27px;
+    }
+}
+@media (max-width: 340px) {
+    .hero h1 {
+        font-size: 25px;
     }
 }
