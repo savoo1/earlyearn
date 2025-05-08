@@ -94,7 +94,7 @@ a {
 		top: 0;
 		bottom: 0;
 		right: 0;
-		background-color: #def2ef;
+		background-color: #daecfe;
 		transition: all ease 0.5s;
 		width: 0;
 		margin: auto;
@@ -274,6 +274,30 @@ nav {
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
+
+		.dots-down {
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			display: block;
+			top: -200px;
+			animation: stars-animation3 10s linear infinite;
+		}
+		@keyframes stars-animation3 {
+			0% {
+				top: -200px;
+				transform: scale(1);
+			}
+			50% {
+				top: -200px;
+				transform: scale(1.2);
+			}
+			100% {
+				top: -200px;
+				transform: scale(1);
+			}
+		}
 
 		.stars {
 			position: absolute;
@@ -1058,6 +1082,34 @@ nav {
 			margin-right: -36px;
 			margin-top: -11px;
 		}
+		.img-w-b {
+			position: relative;
+			.btc-sm {
+				position: absolute;
+				left: 102px;
+				top: 157px;
+				// transform: scale(1.2) rotate(-10deg);
+				animation: btc 7s linear infinite;
+			}
+
+			@keyframes btc {
+				0% {
+					transform: scale(1);
+				}
+				47% {
+					transform: scale(1.2) rotate(-10deg);
+				}
+				50% {
+					transform: scale(1.2) rotate(360deg);
+				}
+				53% {
+					transform: scale(1) rotate(1);
+				}
+				100% {
+					transform: scale(1);
+				}
+			}
+		}
 		ul {
 			@include ul-def();
 			margin-top: 46px;
@@ -1529,9 +1581,9 @@ nav {
 			margin: auto;
 			display: block;
 			top: -200px;
-			animation: stars-animation 5s linear infinite;
+			animation: stars-animation2 10s linear infinite;
 		}
-		@keyframes stars-animation {
+		@keyframes stars-animation2 {
 			0% {
 				top: -200px;
 				transform: scale(1);
