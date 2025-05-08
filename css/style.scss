@@ -33,6 +33,7 @@ p {
 * {
 	box-sizing: border-box;
 }
+select:focus,
 input:focus {
 	outline: none;
 }
@@ -1767,5 +1768,552 @@ footer {
 	}
 	50% {
 		opacity: 0.5;
+	}
+}
+
+.vendor-page {
+	padding-top: 85px;
+	.wrapper {
+		max-width: 1390px;
+	}
+	.box-top {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		min-height: 455px;
+		border-radius: 32px;
+		background: #fafcfe;
+		padding-top: 134px;
+
+		background: url("../img/vendor-bg.webp") no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+
+		.dots-down {
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			display: block;
+			top: -200px;
+			animation: stars-animation3 10s linear infinite;
+		}
+		@keyframes stars-animation3 {
+			0% {
+				top: -200px;
+				transform: scale(1);
+			}
+			50% {
+				top: -200px;
+				transform: scale(1.2);
+			}
+			100% {
+				top: -200px;
+				transform: scale(1);
+			}
+		}
+
+		.stars {
+			position: absolute;
+			left: 13px;
+			top: 14px;
+			animation: stars-animation 13s linear infinite;
+		}
+		@keyframes stars-animation {
+			0% {
+				transform: rotate(0);
+			}
+			15% {
+				opacity: 0;
+			}
+			25% {
+				opacity: 1;
+			}
+			50% {
+				transform: rotate(50deg);
+			}
+			65% {
+				opacity: 0;
+			}
+			75% {
+				opacity: 1;
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+	}
+
+	h1 {
+		color: #181529;
+		text-align: center;
+		font-family: Aeonik;
+		font-size: 49.6px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%; /* 59.52px */
+		max-width: 729px;
+		margin: auto;
+	}
+	p {
+		color: #646464;
+		text-align: center;
+		leading-trim: both;
+		text-edge: cap;
+		font-family: "Aeonik TRIAL";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin-top: 24px;
+	}
+}
+
+.vendor-inputs {
+	padding-bottom: 150px;
+	position: relative;
+	.box-v {
+		border-radius: 20px;
+		background: #fff;
+		box-shadow: 0px 1.81px 3.619px 0px rgba(0, 0, 0, 0.08);
+		padding: 29px 32px;
+		max-width: 1000px;
+		margin: auto;
+		margin-top: -120px;
+	}
+	p {
+		color: #181529;
+		leading-trim: both;
+		text-edge: cap;
+		font-family: Aeonik;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+	input {
+		border-radius: 12px;
+		border: 1px solid #e5e5e5;
+		background: #fff;
+
+		color: #000;
+		leading-trim: both;
+		text-edge: cap;
+		font-family: "Aeonik TRIAL";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		width: 100%;
+		padding: 17px 16px;
+	}
+	.area {
+		display: flex;
+		flex-direction: column;
+		gap: 11px;
+	}
+	input::placeholder {
+		color: #a6a6a6;
+	}
+	.whole-area {
+		margin-top: 18px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.custom-select {
+		option[disabled] {
+			color: #a6a6a6;
+		}
+		&:invalid {
+			color: #a6a6a6;
+		}
+		.selected {
+			color: #a6a6a6;
+			transition: color 0.3s;
+		}
+
+		&.active .select-options {
+			display: block;
+		}
+
+		.dropdown-icon {
+			font-size: 14px;
+			pointer-events: none;
+		}
+
+		.select-options {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background: white;
+			border: 1px solid #ccc;
+			border-top: none;
+			max-height: 250px;
+			overflow-y: auto;
+			border-radius: 0 0 8px 8px;
+			z-index: 10;
+
+			li {
+				padding: 12px 16px;
+				cursor: pointer;
+				transition: background 0.2s;
+
+				&:hover {
+					background: #f0f0f0;
+				}
+			}
+		}
+	}
+
+	::-webkit-scrollbar {
+		width: 3px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #00a1ff;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #00a1ff;
+	}
+
+	/*the container must be positioned relative:*/
+	.custom-select {
+		position: relative;
+	}
+
+	.custom-select select {
+		display: none; /*hide original SELECT element:*/
+	}
+
+	.select-selected.select-placeholder {
+		color: #a6a6a6;
+	}
+	.select-selected {
+		border-radius: 12px;
+		border: 1px solid #e5e5e5;
+		background: #fff;
+
+		// color: #a6a6a6;
+		color: #000;
+		leading-trim: both;
+		text-edge: cap;
+		font-family: "Aeonik TRIAL";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		width: 100%;
+		padding: 17px 16px;
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNNiA5TDEyIDE1TDE4IDkiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPg==");
+		background-repeat: no-repeat;
+		background-position: right 12px center;
+		background-size: 24px;
+		cursor: pointer;
+	}
+
+	/*style the arrow inside the select element:*/
+	.select-selected:after {
+		position: absolute;
+		content: "";
+		top: 14px;
+		right: 10px;
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-color: #fff transparent transparent transparent;
+	}
+
+	/*point the arrow upwards when the select box is open (active):*/
+	.select-selected.select-arrow-active:after {
+		border-color: transparent transparent #fff transparent;
+		top: 7px;
+	}
+
+	/*style the items (options), including the selected item:*/
+	.select-items div,
+	.select-selected {
+		// color: #ffffff;
+		// padding: 8px 16px;
+		// border: 1px solid transparent;
+		// border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+		// cursor: pointer;
+		// user-select: none;
+	}
+
+	/*style items (options):*/
+	.select-items {
+		position: absolute;
+		top: calc(100% + 10px);
+		left: 0;
+		right: 0;
+		z-index: 99;
+		border-radius: 16px;
+		box-shadow: 0px 9px 31.7px 0px rgba(30, 41, 49, 0.1);
+		background-color: #fff;
+		max-height: 400px;
+		overflow: auto;
+		div {
+			padding: 16px 20px;
+			color: #181529;
+			leading-trim: both;
+			text-edge: cap;
+			font-family: "Aeonik TRIAL";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			transition: all ease 0.5s;
+			cursor: pointer;
+		}
+	}
+
+	/*hide the items when the select box is closed:*/
+	.select-hide {
+		display: none;
+	}
+
+	.select-items div:hover,
+	.same-as-selected {
+		background-color: #eaeef1;
+	}
+	button {
+		width: 100%;
+		max-width: 100%;
+		margin-top: 24px;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.7;
+			color: #fff;
+		}
+	}
+}
+
+.custom-data {
+	input {
+		border-radius: 12px;
+		border: 1px solid #e5e5e5;
+		background: #fff;
+
+		// color: #a6a6a6;
+		color: #000;
+		leading-trim: both;
+		text-edge: cap;
+		font-family: "Aeonik TRIAL";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		width: 100%;
+		padding: 17px 16px;
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M5.99534%201.60784C5.8594%201.68284%205.74221%201.79534%205.64846%201.94534C5.50784%202.17034%205.50784%202.17971%205.49378%202.94378C5.47971%203.69846%205.47971%203.71721%205.60159%203.97034C5.77971%204.33128%206.00471%204.4719%206.44534%204.49065C6.92346%204.51878%207.22346%204.35003%207.42503%203.95159C7.48596%203.82971%207.50003%203.6469%207.50003%203.00003C7.50003%202.15159%207.47659%202.03909%207.2469%201.79065C6.97034%201.48596%206.38909%201.40159%205.99534%201.60784Z%22%20fill%3D%22%23646464%22%2F%3E%3Cpath%20d%3D%22M17.0391%201.57496C16.8328%201.68746%2016.6875%201.83277%2016.5891%202.02496C16.5141%202.17496%2016.5%202.30621%2016.5%202.99996C16.5%203.64683%2016.5141%203.82965%2016.575%203.95152C16.7766%204.35465%2017.0766%204.51871%2017.5547%204.49058C17.9813%204.47183%2018.2203%204.32183%2018.3984%203.97027C18.5109%203.74527%2018.5156%203.68902%2018.5156%202.99996C18.5156%202.30621%2018.5109%202.25465%2018.3938%202.02027C18.2109%201.65933%2017.9906%201.52808%2017.5359%201.50933C17.2781%201.49996%2017.1422%201.51871%2017.0391%201.57496Z%22%20fill%3D%22%23646464%22%2F%3E%3Cpath%20d%3D%22M3.34688%203.08438C2.66719%203.31875%202.17031%203.88125%202.02031%204.58438C1.9875%204.73906%201.96875%205.42344%201.96875%206.42188V8.01562H12H22.0312V6.42188C22.0312%205.42344%2022.0125%204.73906%2021.9797%204.58438C21.8484%203.97969%2021.4453%203.45938%2020.8828%203.18281C20.5828%203.0375%2020.5172%203.02344%2020.0391%203.00469L19.5188%202.99063L19.4672%203.51094C19.4016%204.1625%2019.2469%204.53281%2018.8719%204.89844C18.0844%205.66719%2016.9031%205.65781%2016.1203%204.87969C15.7031%204.45781%2015.5156%203.97031%2015.5156%203.3V3H12H8.48438V3.3C8.48438%203.97969%208.30156%204.45313%207.87969%204.87969C7.09688%205.65781%205.92031%205.66719%205.12813%204.89844C4.75313%204.53281%204.59844%204.1625%204.53281%203.51563L4.48125%203H4.03594C3.73125%203.00469%203.50625%203.02813%203.34688%203.08438Z%22%20fill%3D%22%23646464%22%2F%3E%3Cpath%20d%3D%22M1.96875%2014.8359C1.96875%2018.975%201.98281%2020.7375%202.02031%2020.9156C2.15156%2021.5203%202.55469%2022.0406%203.11719%2022.3172L3.44531%2022.4766H12H20.5547L20.8828%2022.3172C21.4453%2022.0406%2021.8484%2021.5203%2021.9797%2020.9156C22.0172%2020.7375%2022.0312%2018.975%2022.0312%2014.8359V9H12H1.96875V14.8359ZM7.38281%2011.6203C7.48594%2011.6672%207.62656%2011.7656%207.69688%2011.8406C7.93125%2012.0891%207.96875%2012.2625%207.96875%2013.0172C7.96875%2013.8141%207.91719%2013.9922%207.61719%2014.2359C7.35938%2014.4516%207.13438%2014.4937%206.39375%2014.475C5.77969%2014.4609%205.72813%2014.4516%205.52188%2014.3297C5.37656%2014.2453%205.25469%2014.1234%205.17031%2013.9781C5.04844%2013.7719%205.03906%2013.7203%205.025%2013.1062C5.00625%2012.3656%205.04844%2012.1406%205.26406%2011.8828C5.50781%2011.5828%205.68594%2011.5312%206.49219%2011.5312C7.07812%2011.5312%207.22813%2011.55%207.38281%2011.6203ZM13.0359%2011.6953C13.1578%2011.7797%2013.2844%2011.9297%2013.3547%2012.0703C13.4719%2012.2906%2013.4766%2012.3422%2013.4766%2013.0078C13.4766%2013.8047%2013.4391%2013.9359%2013.125%2014.2219C12.8813%2014.4375%2012.6938%2014.4844%2012%2014.4844C11.3063%2014.4844%2011.1188%2014.4375%2010.875%2014.2219C10.6031%2013.9734%2010.5375%2013.7906%2010.5094%2013.2C10.4719%2012.2953%2010.6219%2011.8687%2011.0625%2011.6391C11.2641%2011.5312%2011.3063%2011.5266%2012.0563%2011.5406L12.8344%2011.5547L13.0359%2011.6953ZM18.4031%2011.6203C18.6375%2011.7281%2018.8625%2011.9953%2018.9375%2012.2578C18.975%2012.3844%2018.9891%2012.6937%2018.975%2013.1062C18.9609%2013.7203%2018.9516%2013.7719%2018.8297%2013.9781C18.7453%2014.1234%2018.6234%2014.2453%2018.4781%2014.3297C18.2719%2014.4516%2018.2203%2014.4609%2017.6063%2014.475C16.8656%2014.4937%2016.6406%2014.4516%2016.3828%2014.2359C16.0828%2013.9922%2016.0313%2013.8141%2016.0313%2013.0172C16.0313%2012.2625%2016.0688%2012.0891%2016.3031%2011.8406C16.5469%2011.5781%2016.7297%2011.5312%2017.5078%2011.5312C18.0938%2011.5312%2018.2438%2011.55%2018.4031%2011.6203ZM7.27031%2017.0672C7.51406%2017.1422%207.77656%2017.3672%207.87969%2017.5969C7.95%2017.7562%207.96875%2017.9062%207.96875%2018.4922C7.96875%2019.2703%207.92188%2019.4531%207.65938%2019.6969C7.41094%2019.9312%207.2375%2019.9688%206.48281%2019.9688C5.68594%2019.9688%205.50781%2019.9172%205.26406%2019.6172C5.04844%2019.3594%205.00625%2019.1344%205.025%2018.3937C5.03906%2017.7844%205.04844%2017.7281%205.16563%2017.5219C5.29688%2017.3062%205.5125%2017.1375%205.75625%2017.0625C5.94844%2017.0016%207.06875%2017.0062%207.27031%2017.0672ZM12.7641%2017.0672C12.9844%2017.1281%2013.275%2017.3812%2013.3875%2017.6156C13.4625%2017.7609%2013.4766%2017.9016%2013.4766%2018.4922C13.4766%2019.1578%2013.4719%2019.2094%2013.3547%2019.4297C13.2844%2019.5703%2013.1578%2019.7203%2013.0359%2019.8047L12.8344%2019.9453H12H11.1656L10.9641%2019.8047C10.8422%2019.7203%2010.7156%2019.5703%2010.6453%2019.4297C10.5281%2019.2094%2010.5234%2019.1578%2010.5234%2018.4922C10.5234%2017.9109%2010.5375%2017.7609%2010.6078%2017.6203C10.7203%2017.3906%2010.9688%2017.1609%2011.1844%2017.0859C11.4047%2017.0062%2012.5016%2016.9922%2012.7641%2017.0672ZM18.4781%2017.1703C18.6234%2017.2547%2018.7453%2017.3766%2018.8297%2017.5219C18.9516%2017.7281%2018.9609%2017.7797%2018.975%2018.3937C18.9938%2019.1344%2018.9516%2019.3594%2018.7359%2019.6172C18.4922%2019.9172%2018.3141%2019.9688%2017.5172%2019.9688C16.7625%2019.9688%2016.5891%2019.9312%2016.3406%2019.6969C16.0781%2019.4531%2016.0313%2019.2703%2016.0313%2018.4922C16.0313%2017.6859%2016.0875%2017.4984%2016.3781%2017.2687C16.6594%2017.0437%2016.7906%2017.0156%2017.5547%2017.0297C18.2297%2017.0391%2018.2672%2017.0437%2018.4781%2017.1703Z%22%20fill%3D%22%23646464%22%2F%3E%3C%2Fsvg%3E");
+		background-repeat: no-repeat;
+		background-position: right 12px center;
+		background-size: 24px;
+		cursor: pointer;
+	}
+	input:focus {
+		outline: none;
+	}
+}
+
+#ui-datepicker-div {
+	display: none;
+	background-color: #fff;
+	box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+	margin-top: 0.25rem;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	font-family: "Aeonik TRIAL";
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	.ui-datepicker-calendar thead th {
+		padding: 0.25rem 0;
+		text-align: center;
+		font-size: 0.75rem;
+		font-weight: 400;
+		color: #78909c;
+	}
+	.ui-datepicker-calendar tbody td {
+		width: 2.5rem;
+		text-align: center;
+		padding: 0;
+	}
+	.ui-datepicker-calendar tbody td a {
+		display: block;
+		border-radius: 0.25rem;
+		line-height: 2rem;
+		transition: 0.3s all;
+		color: #546e7a;
+		font-size: 0.875rem;
+		text-decoration: none;
+	}
+	.ui-datepicker-calendar tbody td a:hover {
+		background-color: #e0f2f1;
+	}
+	.ui-datepicker-calendar tbody td a.ui-state-active {
+		background-color: #00a1ff;
+		color: white;
+	}
+	.ui-datepicker-header a.ui-corner-all {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		width: 2rem;
+		height: 2rem;
+		margin: 0.5rem;
+		border-radius: 0.25rem;
+		transition: 0.3s all;
+	}
+	.ui-datepicker-header a.ui-corner-all:hover {
+		background-color: #eceff1;
+	}
+	.ui-datepicker-header a.ui-datepicker-prev {
+		left: 0;
+		background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==");
+		background-repeat: no-repeat;
+		background-size: 0.5rem;
+		background-position: 50%;
+		transform: rotate(180deg);
+	}
+	.ui-datepicker-header a.ui-datepicker-next {
+		right: 0;
+		background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==");
+		background-repeat: no-repeat;
+		background-size: 10px;
+		background-position: 50%;
+	}
+	.ui-datepicker-header a > span {
+		display: none;
+	}
+	.ui-datepicker-title {
+		text-align: center;
+		line-height: 2rem;
+		margin-bottom: 0.25rem;
+		font-size: 0.875rem;
+		font-weight: 500;
+		padding-bottom: 0.25rem;
+	}
+	.ui-datepicker-week-col {
+		color: #5bc3ff;
+		font-weight: 400;
+		font-size: 0.75rem;
+	}
+}
+
+.terms-privacy {
+	.box-top {
+		min-height: 376px;
+	}
+	h1 {
+		max-width: unset;
+	}
+}
+
+.paragraph-section {
+	padding-top: 95px;
+	padding-bottom: 95px;
+	.contenet {
+		max-width: 1160px;
+		margin: auto;
+		@include flex-between-center();
+		flex-direction: column;
+		gap: 47px;
+		.container-in {
+			@include flex-between-center();
+			flex-direction: column;
+			align-items: start;
+			gap: 18px;
+			width: 100%;
+			.sm-gap {
+				@include flex-between-center();
+				flex-direction: column;
+				align-items: start;
+				gap: 10px;
+				width: 100%;
+				margin-top: -2px;
+			}
+			h2 {
+				color: #181529;
+				leading-trim: both;
+				text-edge: cap;
+				font-family: Aeonik;
+				font-size: 26px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: normal;
+				text-align: left;
+				width: 100%;
+			}
+			p {
+				color: #646464;
+				leading-trim: both;
+				text-edge: cap;
+				font-family: "Aeonik TRIAL";
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 150%; /* 30px */
+				max-width: 100%;
+				b {
+					font-weight: 700;
+				}
+			}
+			ul {
+				@include ul-def();
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+				margin-top: -1px;
+				li {
+					color: #646464;
+					leading-trim: both;
+					text-edge: cap;
+					font-family: "Aeonik TRIAL";
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 150%; /* 30px */
+					max-width: 100%;
+					padding-left: 30px;
+					position: relative;
+					b {
+						font-weight: 700;
+					}
+					&:before {
+						width: 6px;
+						height: 6px;
+						left: 15px;
+						background-color: #000;
+						border-radius: 100%;
+						content: "";
+						position: absolute;
+						top: 12px;
+					}
+				}
+			}
+		}
 	}
 }

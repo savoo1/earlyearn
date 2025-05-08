@@ -15,6 +15,7 @@
   .hero .wrapper {
     max-width: 950px;
   }
+  .vendor-page h1,
   .hero h1 {
     font-size: 48px;
   }
@@ -123,6 +124,21 @@
   }
 }
 @media (max-width: 1000px) {
+  .vendor-page .box-top {
+    padding: 90px 25px 150px 25px;
+    min-height: unset;
+  }
+  .terms-privacy .box-top {
+    padding: 90px 25px 90px 25px;
+    min-height: unset;
+  }
+  .vendor-inputs .box-v {
+    max-width: calc(100% - 50px);
+  }
+  .vendor-page h1 {
+    max-width: 600px;
+  }
+  .vendor-page .wrapper,
   nav .wrapper,
   .wrapper,
   .hero .wrapper {
@@ -229,6 +245,7 @@
   .whyus {
     padding-bottom: 20px;
   }
+  .vendor-page h1,
   .hero h1 {
     font-size: 38px;
   }
@@ -401,8 +418,38 @@
   footer .boxes .box {
     min-width: unset;
   }
+  .paragraph-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 }
 @media (max-width: 700px) {
+  .paragraph-section .contenet .container-in ul li:before {
+    width: 5px;
+    height: 5px;
+    left: 11px;
+    top: 11px;
+  }
+  .paragraph-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .paragraph-section .contenet .container-in h2 {
+    font-size: 20px;
+  }
+  .paragraph-section .contenet .container-in p,
+  .paragraph-section .contenet .container-in ul li {
+    font-size: 16px;
+  }
+  .paragraph-section .contenet .container-in {
+    gap: 12px;
+  }
+  .paragraph-section .contenet .container-in ul {
+    gap: 8px;
+  }
+  .paragraph-section .contenet {
+    gap: 32px;
+  }
   .removephone {
     display: none;
   }
@@ -414,6 +461,7 @@
   .hero .wrapper {
     max-width: 500px;
   }
+  .vendor-page h1,
   .hero h1 {
     font-size: 31px;
   }
@@ -544,6 +592,39 @@
   .platform .order-box ul li p {
     margin-top: 4px;
   }
+  .vendor-page p {
+    margin-top: 8px;
+  }
+  .vendor-inputs p {
+    font-size: 16px;
+  }
+  .vendor-inputs .select-selected {
+    font-size: 16px;
+  }
+  .vendor-inputs input {
+    font-size: 16px;
+  }
+  .vendor-page .box-top {
+    background: url("../img/vendor-bg-phone.png") no-repeat center center;
+    background-size: cover;
+    padding-top: 60px;
+  }
+  .terms-privacy .box-top {
+    padding: 60px 25px !important;
+  }
+  .vendor-inputs .box-v {
+    max-width: calc(100% - 20px);
+  }
+  .vendor-inputs .box-v {
+    padding: 15px;
+  }
+  .vendor-page .box-top .dots-down {
+    top: -120px !important;
+  }
+  .vendor-inputs {
+    padding-bottom: 50px;
+  }
+  .vendor-page p,
   .blockchain p,
   .faq .row .left p,
   .platform p,
@@ -747,16 +828,19 @@
   }
 }
 @media (max-width: 380px) {
+  .vendor-page h1,
   .hero h1 {
     font-size: 30px;
   }
 }
 @media (max-width: 360px) {
+  .vendor-page h1,
   .hero h1 {
     font-size: 27px;
   }
 }
 @media (max-width: 340px) {
+  .vendor-page h1,
   .hero h1 {
     font-size: 25px;
   }

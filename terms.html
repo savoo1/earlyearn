@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EarlyEarn</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="img/logo-phone.svg">
+
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <link rel="stylesheet" href="css/responsive.css?v=3">
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <div class="wrapper">
+        <div class="row">
+          <div class="left">
+            <a href="index.html"><img src="img/logo.svg"
+                alt="logo" class="logo"></a>
+          </div>
+          <div class="middle">
+            <ul>
+              <li><a href="index.html#whyus">Why Us?</a></li>
+              <li><a href="index.html#affiliate">Affiliate Program</a></li>
+              <li><a href="index.html#platform">Platform</a></li>
+              <li><a href="index.html#blockchain">Blockchain</a></li>
+              <li><a href="index.html#faq">FAQ</a></li>
+              <li><a href="index.html#vendor">Vendor</a></li>
+              <li class="mobileview">
+                <div class="socm">
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                      height="20"
+                      viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M18.7891 1.69525C18.6914 1.72259 17.1445 2.31244 15.3516 2.99994C13.5586 3.68744 9.64844 5.18353 6.66016 6.32806C3.67188 7.47259 1.08203 8.46478 0.898438 8.539C0.28125 8.789 0 9.04681 0 9.37494C0 9.58588 0.0976562 9.72259 0.351562 9.85931C0.523438 9.95306 5.06641 11.3984 5.23438 11.414C5.26562 11.4179 7.66797 9.93353 10.5742 8.11322C13.4766 6.29681 15.9102 4.78119 15.9805 4.74213C16.1367 4.664 16.3828 4.64838 16.4531 4.71869C16.4922 4.75775 16.4883 4.78509 16.4453 4.85931C16.4141 4.91009 14.4609 6.67963 12.1094 8.789L7.83203 12.6288L7.69141 14.6054C7.61328 15.6913 7.53516 16.746 7.52344 16.9413L7.49609 17.3046H7.66797C7.98047 17.3046 8.16406 17.1601 9.44922 15.9296L10.6602 14.7695L12.9766 16.4648C14.5039 17.5859 15.3672 18.1913 15.5078 18.2499C15.6484 18.3046 15.8125 18.3359 15.9766 18.3359C16.3867 18.3398 16.6289 18.1601 16.832 17.6953C16.8711 17.5976 17.6055 14.2499 18.457 10.2538C19.9844 3.08978 20.0078 2.98431 19.9922 2.61322C19.9805 2.27728 19.9648 2.21478 19.8594 2.04681C19.6523 1.71087 19.2148 1.56634 18.7891 1.69525Z"
+                        fill="#019FFC" />
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                      height="20"
+                      viewBox="0 0 20 20" fill="none">
+                      <g clip-path="url(#clip0_246_2867)">
+                        <path
+                          d="M0.218678 0.046875C0.234303 0.0703125 1.94915 2.57031 4.03118 5.59766C6.1093 8.625 7.81243 11.1094 7.81243 11.1172C7.81243 11.125 0.785084 19.3086 0.242115 19.9297C0.187428 19.9961 0.230396 20 1.07805 20H1.97649L5.2968 16.1367L8.62102 12.2773L11.2734 16.1367L13.9257 20H16.8671C19.2109 20 19.8046 19.9883 19.7773 19.9492C19.7616 19.9258 17.996 17.3477 15.8515 14.2266C13.7031 11.1055 11.9413 8.53125 11.9296 8.50391C11.914 8.45703 12.8632 7.34375 17.8788 1.51172L19.1835 0H18.2851H17.3866L14.2499 3.64844C12.5234 5.65234 11.1015 7.28906 11.0898 7.28125C11.0781 7.27734 9.94524 5.63281 8.57024 3.63672L6.07415 0H3.13274C0.863209 0 0.199146 0.0117188 0.218678 0.046875ZM11.1523 9.83203C14.4179 14.5078 17.1562 18.4258 17.2382 18.543L17.3866 18.75H16.0859L14.7851 18.7461L8.84758 10.25C5.58196 5.57422 2.84368 1.65625 2.76165 1.53906L2.6093 1.32812H3.91399L5.21477 1.33203L11.1523 9.83203Z"
+                          fill="#019FFC" />
+                      </g>
+                      <defs>
+                        <clippath id="clip0_246_28672">
+                          <rect width="20" height="20" fill="white" />
+                        </clippath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="right">
+            <a href="#" class="btn-t1"><div class="hover-l"></div><span
+                class="cont">Log
+                in</span></a>
+            <a href="#" class="btn-t1 btn-blue"><div
+                class="hover-l"></div><span class="cont">Sign
+                Up</span></a>
+          </div>
+          <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="vendor-page terms-privacy">
+      <div class="wrapper">
+        <div class="box-top">
+          <img src="img/dots-down.svg" class="dots-down" alt="dots-down">
+          <img src="img/hero-stars.webp" class="stars" alt="stars">
+          <h1>Terms and Conditions (T&Cs) of EarlyEarn.io</h1>
+          <p>Join EarlyEarn and get your project exposed to our network
+            instantly!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="paragraph-section">
+      <div class="wrapper">
+        <div class="contenet">
+          <div class="container-in">
+            <h2>
+              1. Scope of Application
+            </h2>
+            <p>
+              These Terms and Conditions (T&Cs) apply to all users of the
+              EarlyEarn.io platform who register as Vendors or Affiliates and
+              use the offered services and features. By using the platform, you
+              agree to these T&Cs.
+            </p>
+          </div>
+          <div class="container-in">
+            <h2>
+              2. Affiliate Responsibility for Advertising
+            </h2>
+            <p>
+              Affiliates are responsible for ensuring that their advertising
+              complies with applicable laws and EarlyEarn.io’s ethical
+              guidelines. Any form of misleading advertising or unlawful
+              practice, such as spam, false claims, or violations of advertising
+              laws, will result in an immediate account suspension and possible
+              legal action.
+            </p>
+          </div>
+          <div class="container-in">
+            <h2>
+              3. Commission Model and Payments
+            </h2>
+            <ul>
+              <li><b>Commissions for Affiliates will be paid according to the
+                  agreed-upon compensation structure.</b></li>
+              <li><b>EarlyEarn.io reserves the right to delay or refuse payments
+                  to Affiliates if violations of the T&Cs or applicable laws are
+                  found.</b></li>
+              <li><b>All payments between Vendors and Affiliates will be
+                  conducted through the blockchain and are publicly
+                  visible.</b></li>
+            </ul>
+          </div>
+          <div class="container-in">
+            <h2>
+              4. Compliance and Anti-Money Laundering (AML)
+            </h2>
+            <p>
+              EarlyEarn.io reserves the right to conduct a Know Your Customer
+              (KYC) verification at any time to ensure that all Affiliates
+              comply with relevant regulations and AML guidelines.
+            </p>
+          </div>
+          <div class="container-in">
+            <h2>
+              5. Prohibition of Unlawful Activities
+            </h2>
+            <p>
+              Affiliates may not engage in fraudulent or manipulative practices
+              such as click farming, false clicks, or the use of bots to
+              generate traffic. Any violations of these terms will lead to
+              immediate account suspension.
+            </p>
+          </div>
+          <div class="container-in">
+            <h2>
+              6. Vendor Responsibility
+            </h2>
+            <p>
+              Vendors are responsible for accurately and fully presenting their
+              projects and tokens on the platform. EarlyEarn.io takes no
+              liability for incorrect, incomplete, or misleading information
+              provided by Vendors. Vendors must ensure that they comply with all
+              legal regulations regarding their projects and tokens.
+            </p>
+          </div>
+          <div class="container-in">
+            <h2>
+              7. Termination of Partnership
+            </h2>
+            <p>
+              EarlyEarn.io reserves the right to terminate the partnership with
+              any Vendor or Affiliate at any time if a serious violation of
+              these T&Cs or applicable laws is detected. This applies especially
+              to violations of Anti-Money Laundering regulations or the
+              prohibition of unlawful activities.
+            </p>
+          </div>
+          <div class="container-in">
+            <h2>
+              8. Tax Responsibility
+            </h2>
+            <ul>
+              <li><b>Affiliates and Vendors are solely responsible for properly
+                  taxing their income generated through the use of the
+                  platform.</b></li>
+              <li><b>EarlyEarn.io is not liable for any tax obligations of
+                  users, whether they arise from payments, commissions, or other
+                  financial transactions.</b></li>
+            </ul>
+          </div>
+          <div class="container-in">
+            <h2>
+              9. Monitoring and Reporting
+            </h2>
+            <ul>
+              <li><b>EarlyEarn.io reserves the right to monitor and analyze all
+                  activities on the platform to ensure that all payments are
+                  made correctly and that no fraudulent or unlawful activities
+                  occur.</b></li>
+              <li><b>By using the platform, users agree to this monitoring and
+                  acknowledge that all marketing and payment activities are
+                  subject to oversight.</b></li>
+            </ul>
+          </div>
+          <div class="container-in">
+            <h2>
+              10. Regulation of Tokens and Projects
+            </h2>
+            <ul>
+              <li><b> EarlyEarn.io is not a financial advisory service and takes
+                  no responsibility for the regulation or legal review of the
+                  Web3 projects or tokens offered by Vendors on the
+                  platform.</b></li>
+              <li><b>Users should independently investigate the legal status in
+                  their country before investing in projects.</b></li>
+              <li><b>All projects offered on the platform are the responsibility
+                  of the Vendors themselves, and EarlyEarn.io assumes no
+                  liability for the long-term viability of projects or
+                  tokens.</b></li>
+            </ul>
+          </div>
+          <div class="container-in">
+            <h2>
+              11. Responsibility for Advertising and Marketing
+            </h2>
+            <p>
+              Affiliates are responsible for ensuring that their marketing
+              activities comply with applicable laws, regulations, and
+              EarlyEarn.io’s ethical guidelines. Any violations of these
+              requirements will lead to immediate account suspension.
+              EarlyEarn.io assumes no responsibility for how Affiliates place
+              their advertising.
+            </p>
+          </div>
+          <div class="container-in">
+            <h2>
+              12. Liability for Incorrect Payments
+            </h2>
+            <ul>
+              <li><b>EarlyEarn.io assumes no liability if a user selects an
+                  incorrect wallet address or blockchain for a
+                  transaction.</b></li>
+              <li><b>Blockchain transactions are final and cannot be
+                  reversed..</b></li>
+              <li><b>Any losses due to user errors are the sole responsibility
+                  of the user.</b></li>
+            </ul>
+          </div>
+          <div class="container-in">
+            <h2>
+              13. Payments Through the Blockchain
+            </h2>
+            <p>
+              All payments between Vendors and Affiliates will be processed
+              through the blockchain and are publicly visible. Users confirm by
+              using the platform that they are aware of and accept the
+              transparency of these payments.
+            </p>
+
+          </div>
+          <div class="container-in">
+            <h2>
+              14. Force Majeure (Unforeseeable Events)
+            </h2>
+            <p>
+              EarlyEarn.io is not responsible for service disruptions or
+              financial losses caused by events beyond our control, including
+              but not limited to:
+            </p>
+            <ul>
+              <li><b>Hacks</b></li>
+              <li><b>Technical failures</b></li>
+              <li><b>Blockchain malfunctions</b></li>
+              <li><b>Regulatory changes</b></li>
+              <li><b>Natural disasters</b></li>
+            </ul>
+            <p>In such cases, EarlyEarn.io may temporarily or permanently
+              suspend services without liability.</p>
+          </div>
+          <div class="container-in">
+            <h2>
+              15. Prohibited Users & Countries
+            </h2>
+            <p>
+              Users from sanctioned countries or individuals listed on U.S.
+              OFAC, EU, or UN sanctions lists are strictly prohibited from using
+              EarlyEarn.io. EarlyEarn.io reserves the right to block access to
+              users from jurisdictions where crypto transactions are restricted.
+            </p>
+
+          </div>
+          <div class="container-in">
+            <h2>
+              16. No Investment Advice / No Guarantees
+            </h2>
+            <ul>
+              <li><b>EarlyEarn.io does not provide investment, legal, or
+                  financial advice.</b></li>
+              <li><b>Users are solely responsible for conducting due diligence
+                  before making any financial decisions.</b></li>
+            </ul>
+          </div>
+          <div class="container-in">
+            <h2>
+              17. Account Suspension Without Prior Notice
+            </h2>
+            <p>
+              EarlyEarn.io reserves the right to suspend or terminate any user
+              account at its sole discretion, without prior notice, if it
+              suspects fraudulent activity, security risks, or violations of
+              these Terms and Conditions
+            </p>
+          </div>
+          <div class="container-in">
+            <h2>
+              18. Dispute Resolution & Arbitration Clause
+            </h2>
+            <p>
+              All disputes arising from these Terms & Conditions shall be
+              resolved through binding arbitration in Wyoming, USA, under the
+              rules of the American Arbitration Association (AAA). Users waive
+              their right to a class-action lawsuit.
+            </p>
+          </div>
+          <div class="container-in">
+            <h2>
+              19. Consent to Use of Tracking Tools
+            </h2>
+            <p>
+              EarlyEarn.io uses tools to monitor and analyze activities on the
+              platform to ensure that all payments are made correctly and that
+              no unlawful activities occur. By using the platform, all users
+              agree to the use of these tracking tools.
+            </p>
+
+          </div>
+          <div class="container-in">
+            <h2>
+              20. No Fiat-to-Web3 Exchange
+            </h2>
+            <p>
+              EarlyEarn.io is not an exchange platform and does not offer the
+              ability to convert fiat currency to Web3 tokens or vice versa. The
+              platform is solely intended to split commissions between Vendors
+              and Affiliates.
+            </p>
+
+          </div>
+          <div class="container-in">
+            <h2>
+              21. No Responsibility for Ad Placement
+            </h2>
+            <p>
+              Affiliates are responsible for ensuring that their advertising is
+              placed in accordance with the rules and regulations of the
+              platforms or communities where they advertise Web3 projects and
+              tokens.
+            </p>
+
+          </div>
+          <div class="container-in">
+            <h2>
+              22. Internal Commission Model and Bonus Payments
+            </h2>
+            <p>
+              EarlyEarn.io reserves the right to offer internal bonus payments
+              or special compensations to Affiliates or Vendors. However, there
+              is no entitlement to these payments, and the platform reserves the
+              right to stop these payments at any time.
+            </p>
+
+          </div>
+          <div class="container-in">
+            <h2>
+              23. Risks of Cryptocurrencies
+            </h2>
+            <ul>
+              <li><b>Cryptocurrencies are highly volatile, and their value can
+                  fluctuate significantly.</b></li>
+              <li><b>EarlyEarn.io assumes no liability for losses due to market
+                  fluctuations, manipulation, or liquidity issues.</b></li>
+            </ul>
+
+          </div>
+          <div class="container-in">
+            <h2>
+              24. Risks of Smart Contracts
+            </h2>
+            <ul>
+              <li> <b>All payments on EarlyEarn.io are processed via smart
+                  contracts.</b></li>
+              <li> <b>If bugs or exploits occur, EarlyEarn.io is not liable for
+                  any losses.</b></li>
+            </ul>
+
+          </div>
+          <div class="container-in">
+            <h2>
+              25. Gas Fees & Blockchain Network Fees
+            </h2>
+            <ul>
+              <li><b>Transactions are subject to network fees (Gas Fees), which
+                  can vary.</b></li>
+              <li><b>EarlyEarn.io has no control over these fees and does not
+                  offer reimbursements.</b></li>
+            </ul>
+
+          </div>
+          <div class="container-in">
+            <h2>
+              26. Token Delisting & Project Changes
+            </h2>
+            <ul>
+              <li><b>EarlyEarn.io may remove projects or tokens at any time if
+                  regulatory risks or security concerns arise.</b></li>
+              <li><b>Users have no entitlement to a project or token remaining
+                  listed on the platform.</b></li>
+            </ul>
+
+          </div>
+          <div class="container-in">
+            <h2>
+              27. No Protection Under Traditional Financial Laws
+            </h2>
+            <ul>
+              <li><b>Crypto transactions are not covered by traditional
+                  financial laws such as deposit insurance or consumer
+                  protection.</b></li>
+              <li><b>Users accept that EarlyEarn.io does not offer refunds in
+                  case of technical issues or hacks.</b></li>
+            </ul>
+
+          </div>
+          <div class="container-in">
+            <h2>
+              28. Final Provisions
+            </h2>
+            <ul>
+              <li><b>EarlyEarn.io reserves the right to change these T&Cs at any
+                  time.</b></li>
+              <li><b>Changes will be posted on the platform and will be binding
+                  on all users from the date of publication.</b></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <div class="boxes">
+          <div class="box">
+            <img loading="lazy" src="img/logo.svg" alt="logo" class="logo">
+            <p>Join our community to stay updated on presales, promotions, and
+              earning opportunities!</p>
+          </div>
+          <div class="box">
+            <h3>Quick Link</h3>
+            <ul>
+              <li><a href="index.html#whyus" name="whyus">Why Us ?</a></li>
+              <li><a href="index.html#affiliate" name="affiliates">Affiliate
+                  Program</a></li>
+              <li><a href="index.html#platform"
+                  name="platform">Platform</a></li>
+              <li><a href="index.html#blockchain"
+                  name="blockchain">Blockchain</a></li>
+              <li><a href="index.html#faq" name="faq">FAQ</a></li>
+              <li><a href="index.html#vendor" name="presale">Vendor</a></li>
+              <li><a href="#">Log in</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="privacy.html">Privacy & policy</a></li>
+              <li><a href="terms.html">Terms and condition</a></li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>Follow Us</h3>
+            <div class="socm">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M18.7891 1.69525C18.6914 1.72259 17.1445 2.31244 15.3516 2.99994C13.5586 3.68744 9.64844 5.18353 6.66016 6.32806C3.67188 7.47259 1.08203 8.46478 0.898438 8.539C0.28125 8.789 0 9.04681 0 9.37494C0 9.58588 0.0976562 9.72259 0.351562 9.85931C0.523438 9.95306 5.06641 11.3984 5.23438 11.414C5.26562 11.4179 7.66797 9.93353 10.5742 8.11322C13.4766 6.29681 15.9102 4.78119 15.9805 4.74213C16.1367 4.664 16.3828 4.64838 16.4531 4.71869C16.4922 4.75775 16.4883 4.78509 16.4453 4.85931C16.4141 4.91009 14.4609 6.67963 12.1094 8.789L7.83203 12.6288L7.69141 14.6054C7.61328 15.6913 7.53516 16.746 7.52344 16.9413L7.49609 17.3046H7.66797C7.98047 17.3046 8.16406 17.1601 9.44922 15.9296L10.6602 14.7695L12.9766 16.4648C14.5039 17.5859 15.3672 18.1913 15.5078 18.2499C15.6484 18.3046 15.8125 18.3359 15.9766 18.3359C16.3867 18.3398 16.6289 18.1601 16.832 17.6953C16.8711 17.5976 17.6055 14.2499 18.457 10.2538C19.9844 3.08978 20.0078 2.98431 19.9922 2.61322C19.9805 2.27728 19.9648 2.21478 19.8594 2.04681C19.6523 1.71087 19.2148 1.56634 18.7891 1.69525Z"
+                    fill="#019FFC" />
+                </svg>
+              </a>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  viewBox="0 0 20 20" fill="none">
+                  <g clip-path="url(#clip0_246_2867)">
+                    <path
+                      d="M0.218678 0.046875C0.234303 0.0703125 1.94915 2.57031 4.03118 5.59766C6.1093 8.625 7.81243 11.1094 7.81243 11.1172C7.81243 11.125 0.785084 19.3086 0.242115 19.9297C0.187428 19.9961 0.230396 20 1.07805 20H1.97649L5.2968 16.1367L8.62102 12.2773L11.2734 16.1367L13.9257 20H16.8671C19.2109 20 19.8046 19.9883 19.7773 19.9492C19.7616 19.9258 17.996 17.3477 15.8515 14.2266C13.7031 11.1055 11.9413 8.53125 11.9296 8.50391C11.914 8.45703 12.8632 7.34375 17.8788 1.51172L19.1835 0H18.2851H17.3866L14.2499 3.64844C12.5234 5.65234 11.1015 7.28906 11.0898 7.28125C11.0781 7.27734 9.94524 5.63281 8.57024 3.63672L6.07415 0H3.13274C0.863209 0 0.199146 0.0117188 0.218678 0.046875ZM11.1523 9.83203C14.4179 14.5078 17.1562 18.4258 17.2382 18.543L17.3866 18.75H16.0859L14.7851 18.7461L8.84758 10.25C5.58196 5.57422 2.84368 1.65625 2.76165 1.53906L2.6093 1.32812H3.91399L5.21477 1.33203L11.1523 9.83203Z"
+                      fill="#019FFC" />
+                  </g>
+                  <defs>
+                    <clippath id="clip0_246_2867">
+                      <rect width="20" height="20" fill="white" />
+                    </clippath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="downline">
+      © 2025 PresaleBoost. All rights reserved.
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" title="Go to top"><img src="img/uparrow.svg"
+        alt></a>
+
+    <script src="js/main.js"></script>
+    <script>
+      var x, i, j, l, ll, selElmnt, a, b, c;
+      /*look for any elements with the class "custom-select":*/
+      x = document.getElementsByClassName("custom-select");
+      l = x.length;
+      for (i = 0; i < l; i++) {
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        ll = selElmnt.length;
+        /*for each element, create a new DIV that will act as the selected item:*/
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected select-placeholder");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+        /*for each element, create a new DIV that will contain the option list:*/
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < ll; j++) {
+          /*for each option in the original select element,
+          create a new DIV that will act as an option item:*/
+          c = document.createElement("DIV");
+          c.innerHTML = selElmnt.options[j].innerHTML;
+          c.addEventListener("click", function(e) {
+              /*when an item is clicked, update the original select box,
+              and the selected item:*/
+              var y, i, k, s, h, sl, yl;
+              s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+              sl = s.length;
+              h = this.parentNode.previousSibling;
+              for (i = 0; i < sl; i++) {
+                if (s.options[i].innerHTML == this.innerHTML) {
+                  s.selectedIndex = i;
+                  h.innerHTML = this.innerHTML;
+                  h.classList.remove("select-placeholder");
+                  y = this.parentNode.getElementsByClassName("same-as-selected");
+                  yl = y.length;
+                  for (k = 0; k < yl; k++) {
+                    y[k].removeAttribute("class");
+                  }
+                  this.setAttribute("class", "same-as-selected");
+                  break;
+                }
+              }
+              h.click();
+          });
+          b.appendChild(c);
+        }
+        x[i].appendChild(b);
+        a.addEventListener("click", function(e) {
+            /*when the select box is clicked, close any other select boxes,
+            and open/close the current select box:*/
+            e.stopPropagation();
+            closeAllSelect(this);
+            this.nextSibling.classList.toggle("select-hide");
+            this.classList.toggle("select-arrow-active");
+          });
+      }
+      function closeAllSelect(elmnt) {
+        /*a function that will close all select boxes in the document,
+        except the current select box:*/
+        var x, y, i, xl, yl, arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        xl = x.length;
+        yl = y.length;
+        for (i = 0; i < yl; i++) {
+          if (elmnt == y[i]) {
+            arrNo.push(i)
+          } else {
+            y[i].classList.remove("select-arrow-active");
+          }
+        }
+        for (i = 0; i < xl; i++) {
+          if (arrNo.indexOf(i)) {
+            x[i].classList.add("select-hide");
+          }
+        }
+      }
+      /*if the user clicks anywhere outside the select box,
+      then close all select boxes:*/
+      document.addEventListener("click", closeAllSelect);
+
+
+      $( function() {
+        $( "#datepicker" ).datepicker({
+          dateFormat: "dd-mm-yy"
+          ,	duration: "fast"
+        });
+      } );
+      </script>
+  </body>
+</html>
