@@ -1086,10 +1086,10 @@ nav {
 			position: relative;
 			.btc-sm {
 				position: absolute;
-				left: 102px;
-				top: 157px;
+				left: 103px;
+				top: 159px;
 				// transform: scale(1.2) rotate(-10deg);
-				animation: btc 7s linear infinite;
+				animation: float 2.2s ease-in-out infinite;
 			}
 
 			@keyframes btc {
