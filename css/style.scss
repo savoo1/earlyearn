@@ -1082,34 +1082,6 @@ nav {
 			margin-right: -36px;
 			margin-top: -11px;
 		}
-		.img-w-b {
-			position: relative;
-			.btc-sm {
-				position: absolute;
-				left: 103px;
-				top: 159px;
-				// transform: scale(1.2) rotate(-10deg);
-				animation: float 2.2s ease-in-out infinite;
-			}
-
-			@keyframes btc {
-				0% {
-					transform: scale(1);
-				}
-				47% {
-					transform: scale(1.2) rotate(-10deg);
-				}
-				50% {
-					transform: scale(1.2) rotate(360deg);
-				}
-				53% {
-					transform: scale(1) rotate(1);
-				}
-				100% {
-					transform: scale(1);
-				}
-			}
-		}
 		ul {
 			@include ul-def();
 			margin-top: 46px;
