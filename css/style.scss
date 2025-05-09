@@ -20,6 +20,7 @@ body {
 	padding: 0;
 	margin: 0;
 	background-color: #f4f8fb;
+	top: 0 !important;
 }
 h1,
 h2,
@@ -173,7 +174,7 @@ nav {
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 0;
+	top: 0 !important;
 	padding: 15px 0;
 	z-index: 9999999999999999;
 	.logophone {
@@ -211,6 +212,7 @@ nav {
 			@include ul-def();
 			gap: 24px;
 			li {
+				text-align: center;
 				a {
 					color: #1c0a0a;
 					font-family: "Aeonik TRIAL";
@@ -219,6 +221,7 @@ nav {
 					font-weight: 400;
 					line-height: 115%; /* 18.4px */
 					transition: all ease 0.5s;
+					text-align: center;
 					&:hover {
 						color: #8965e5;
 					}
@@ -232,6 +235,133 @@ nav {
 	.right {
 		@include flex-center();
 		gap: 18px;
+		.language-switcher {
+			position: relative;
+			display: inline-block;
+			font-family: Urbanist;
+		}
+
+		.language-switcher .choosen {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			font-family: Urbanist;
+		}
+
+		.language-switcher {
+			position: relative;
+			display: inline-block;
+		}
+
+		.language-switcher .choosen {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		.language-dropdown {
+			position: absolute;
+			top: calc(100% - 5px);
+			left: 0;
+			background-color: #fff;
+			border: 1px solid #fff;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+			// border-radius: 10px;
+			padding: 5px 0;
+			display: none;
+			width: 120px;
+			list-style: none;
+			z-index: 100;
+			max-height: 300px;
+			overflow: auto;
+			flex-direction: column;
+			align-items: start;
+
+			-webkit-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.15);
+			-moz-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.15);
+			box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.15);
+		}
+
+		.language-dropdown li {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			padding: 10px;
+			color: #060c0e;
+			cursor: pointer;
+			transition: background 0.3s;
+			width: 100%;
+
+			color: #726d75;
+			font-family: Urbanist;
+			font-size: 16px;
+			font-style: normal;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			letter-spacing: -0.2px;
+			text-transform: capitalize;
+
+			img {
+				max-width: 20px;
+			}
+		}
+
+		.language-dropdown li:hover {
+			background-color: #ebf9ff;
+			color: black;
+		}
+	}
+}
+
+.language-switcher {
+	position: relative;
+
+	.show {
+		display: flex;
+	}
+	.choosen {
+		display: inline-flex;
+
+		color: #726d75;
+		font-family: "Neue Montreal";
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: -0.2px;
+		text-transform: capitalize;
+
+		transition: all ease 0.5s;
+		gap: 4px;
+		background-color: transparent;
+		align-items: center;
+		justify-content: center;
+		display: flex !important;
+
+		border-radius: 8px;
+		border: 1px solid #e8e7e9;
+		background: #f8f8f8;
+		padding: 8px 10px;
+		// span {
+		// 	padding-bottom: 1px;
+		// }
+		img {
+			max-width: 20px;
+		}
+		svg path {
+			fill: #060c0e;
+			transition: all ease 0.5s;
+		}
+		&:hover {
+			// background-color: #f6e00e;
+			// color: #000;
+			svg path {
+				fill: #000;
+			}
+		}
 	}
 }
 
@@ -254,7 +384,7 @@ nav {
 
 .hero {
 	position: relative;
-	margin-top: 86px;
+	padding-top: 86px;
 	.sign-btns {
 		display: none;
 	}
@@ -2316,4 +2446,35 @@ footer {
 			}
 		}
 	}
+}
+
+/* Hide the Google Translate top bar */
+.goog-te-banner-frame {
+	display: none !important;
+}
+
+/* Hide the Google Translate pop-up */
+body > .skiptranslate {
+	display: none !important;
+}
+
+/* Hide the Google Translate logo */
+.goog-logo-link {
+	display: none !important;
+}
+
+/* Hide the Google Translate dropdown default styles */
+.goog-te-gadget {
+	font-size: 0px;
+}
+
+/* Ensure page doesn’t shift due to hidden elements */
+.goog-te-gadget span {
+	display: none !important;
+}
+
+/* Optional: If you are using the inline Google Translate dropdown */
+#google_translate_element {
+	position: absolute;
+	opacity: 0;
 }

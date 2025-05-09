@@ -12,6 +12,12 @@
 }
 
 @media (max-width: 1200px) {
+    nav .middle ul {
+        gap: 10px;
+        li a {
+            font-size: 14px;
+        }
+    }
     .wrapper,
     .hero .wrapper {
         max-width: 950px;
@@ -131,6 +137,12 @@
 }
 
 @media (max-width: 1000px) {
+    nav .middle ul {
+        gap: 20px;
+    }
+    nav .middle ul li a {
+        font-size: 16px;
+    }
     .vendor-page .box-top {
         padding: 90px 25px 150px 25px;
         min-height: unset;
@@ -187,8 +199,20 @@
         opacity: 0;
         transition: all ease 0.5s;
     }
+    .mobile-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: 3px;
+    }
+    nav {
+        min-height: 82px;
+    }
     nav .right {
-        display: none;
+        // display: none;
+        .btn-t1 {
+            display: none;
+        }
     }
     nav {
         .lines {
@@ -240,7 +264,7 @@
         z-index: 9999;
     }
     .hero {
-        margin-top: 76px;
+        padding-top: 76px;
         .only-desktop {
             display: none;
         }
